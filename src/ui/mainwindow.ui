@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowTitle">
+   <string>Tomasulo Simulator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="">
+    <normaloff>:/icons/cpu_icon.png</normaloff>:/icons/cpu_icon.png
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <!-- Barra de controle -->
+    <item>
+     <layout class="QHBoxLayout" name="controlBar">
+      <item><widget class="QPushButton" name="btnRun"><property name="text"><string>Executar</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnPause"><property name="text"><string>Pausar</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnStep"><property name="text"><string>Passo</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnReset"><property name="text"><string>Resetar</string></property></widget></item>
+      <item><spacer name="spacer1"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+      <item><widget class="QLabel" name="lblCycle"><property name="text"><string>Ciclo: 0</string></property></widget></item>
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation"><enum>Qt::Horizontal</enum></property>
+      <widget class="QTabWidget" name="tabWidget">
+       <widget class="QWidget" name="tabPipeline">
+        <attribute name="title"><string>Pipeline</string></attribute>
+        <layout class="QVBoxLayout"><item><widget class="QGraphicsView" name="graphicsPipeline"/></item></layout>
+       </widget>
+       <widget class="QWidget" name="tabRS">
+        <attribute name="title"><string>Estações de Reserva</string></attribute>
+        <layout class="QVBoxLayout"><item><widget class="QTableWidget" name="tableRS"/></item></layout>
+       </widget>
+       <widget class="QWidget" name="tabROB">
+        <attribute name="title"><string>Reorder Buffer</string></attribute>
+        <layout class="QVBoxLayout"><item><widget class="QTableWidget" name="tableROB"/></item></layout>
+       </widget>
+       <widget class="QWidget" name="tabRegs">
+        <attribute name="title"><string>Registradores</string></attribute>
+        <layout class="QVBoxLayout"><item><widget class="QTableWidget" name="tableRegs"/></item></layout>
+       </widget>
+       <widget class="QWidget" name="tabLogs">
+        <attribute name="title"><string>Logs</string></attribute>
+        <layout class="QVBoxLayout"><item><widget class="QPlainTextEdit" name="txtLog"><property name="readOnly"><bool>true</bool></property></widget></item></layout>
+       </widget>
+
+       <!-- Nova aba: Preferências -->
+       <widget class="QWidget" name="tabSettings">
+        <attribute name="title"><string>Preferências</string></attribute>
+        <layout class="QVBoxLayout" name="layoutSettings">
+         <item>
+          <widget class="QGroupBox" name="groupTheme">
+           <property name="title"><string>Tema</string></property>
+           <layout class="QHBoxLayout">
+            <item><widget class="QRadioButton" name="radioDark"><property name="text"><string>Escuro</string></property><property name="checked"><bool>true</bool></property></widget></item>
+            <item><widget class="QRadioButton" name="radioLight"><property name="text"><string>Claro</string></property></widget></item>
+           </layout>
+          </widget>
+         </item>
+         <item><spacer name="spacerFuture"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>300</height></size></property></spacer></item>
+        </layout>
+       </widget>
+      </widget>
+
+      <widget class="QGroupBox" name="metricsBox">
+       <property name="title"><string>Métricas de desempenho</string></property>
+       <layout class="QFormLayout">
+        <item row="0" column="0"><widget class="QLabel" name="lblIPC"><property name="text"><string>IPC médio:</string></property></widget></item>
+        <item row="0" column="1"><widget class="QLabel" name="valIPC"><property name="text"><string>0.00</string></property></widget></item>
+        <item row="1" column="0"><widget class="QLabel" name="lblCiclos"><property name="text"><string>Ciclos:</string></property></widget></item>
+        <item row="1" column="1"><widget class="QLabel" name="valCiclos"><property name="text"><string>0</string></property></widget></item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+
+  <!-- MENU SUPERIOR -->
+  <widget class="QMenuBar" name="menubar">
+   <addaction name="menuArquivo"/>
+   <addaction name="menuExibir"/>
+   <addaction name="menuAjuda"/>
+  </widget>
+
+  <action name="actionAbrir">
+   <property name="text"><string>Abrir programa...</string></property>
+  </action>
+  <action name="actionPreferencias">
+   <property name="text"><string>Preferências</string></property>
+  </action>
+  <action name="actionSair">
+   <property name="text"><string>Sair</string></property>
+  </action>
+  <action name="actionSobre">
+   <property name="text"><string>Sobre o simulador</string></property>
+  </action>
+
+  <widget class="QMenu" name="menuArquivo">
+   <property name="title"><string>Arquivo</string></property>
+   <addaction name="actionAbrir"/>
+   <addaction name="actionPreferencias"/>
+   <addaction name="actionSair"/>
+  </widget>
+
+  <widget class="QMenu" name="menuExibir">
+   <property name="title"><string>Exibir</string></property>
+  </widget>
+
+  <widget class="QMenu" name="menuAjuda">
+   <property name="title"><string>Ajuda</string></property>
+   <addaction name="actionSobre"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

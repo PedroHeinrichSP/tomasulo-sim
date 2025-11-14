@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <!-- Ícones -->
+        <file>icons/cpu_icon.png</file>
+
+        <!-- Estilos -->
+        <file>styles/style_dark.qss</file>
+        <file>styles/style_light.qss</file>
+    </qresource>
+</RCC>
