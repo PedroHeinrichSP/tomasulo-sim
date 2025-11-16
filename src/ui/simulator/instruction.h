@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <simulator_utils.h>
 
 /*
  * Representa uma instrução MIPS simulada no algoritmo de Tomasulo.
@@ -16,20 +17,6 @@
 
 class Instruction {
     public:
-
-        enum class OpCode {
-            INVALID,
-            NOP,
-            // R-Type
-            ADD, SUB, MUL, DIV,
-            ADD_D, SUB_D, MUL_D, DIV_D,
-            // I-Type
-            ADDI, SUBI,
-            // Load/Store
-            LW, SW, L_D, S_D,
-            // Branch/Jump
-            BEQ, BNE, JAL
-        };
 
         OpCode opcode = OpCode::INVALID;
         std::string rd, rs, rt, immediate;

@@ -4,8 +4,7 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-
-#define NO_PRODUCER -1
+#include <simulator_utils.h>
 
 /*
  * Representa o conjunto de registradores:

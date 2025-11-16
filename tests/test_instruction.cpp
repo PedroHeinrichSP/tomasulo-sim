@@ -6,7 +6,7 @@ TEST(InstructionParse, R_Type) {
     Instruction inst("ADD R1, R2, R3");
     
     EXPECT_TRUE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::ADD);
+    EXPECT_EQ(inst.opcode, OpCode::ADD);
     EXPECT_EQ(inst.rd, "R1");
     EXPECT_EQ(inst.rs, "R2");
     EXPECT_EQ(inst.rt, "R3");
@@ -19,7 +19,7 @@ TEST(InstructionParse, Load_Type) {
     Instruction inst("LW F1, 32(R4)");
 
     EXPECT_TRUE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::LW);
+    EXPECT_EQ(inst.opcode, OpCode::LW);
     EXPECT_EQ(inst.rd, "F1");     // Destino
     EXPECT_EQ(inst.rs, "R4");     // Base
     EXPECT_EQ(inst.immediate, "32");    // Imediato
@@ -32,7 +32,7 @@ TEST(InstructionParse, Store_Type) {
     Instruction inst("SW F2, 0(R1)");
 
     EXPECT_TRUE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::SW);
+    EXPECT_EQ(inst.opcode, OpCode::SW);
     EXPECT_EQ(inst.rt, "F2");     // Fonte (Store usa 'rt')
     EXPECT_EQ(inst.rs, "R1");     // Base
     EXPECT_EQ(inst.immediate, "0");     // Imediato
@@ -44,7 +44,7 @@ TEST(InstructionParse, Immediate_Type) {
     Instruction inst("ADDI R5, R6, -50"); // O tokenizer vai separar "-50"
 
     EXPECT_TRUE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::ADDI);
+    EXPECT_EQ(inst.opcode, OpCode::ADDI);
     EXPECT_EQ(inst.rd, "R5");
     EXPECT_EQ(inst.rs, "R6");
     EXPECT_EQ(inst.immediate, "-50");   // Imediato (negativo)
@@ -55,7 +55,7 @@ TEST(InstructionParse, Immediate_Type) {
 TEST(InstructionParse, Invalid_Opcode) {
     Instruction inst("FOO BAR BAZ");
     EXPECT_FALSE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::INVALID);
+    EXPECT_EQ(inst.opcode, OpCode::INVALID);
 }
 
 // Teste para sintaxe inválida (formato errado)
@@ -74,7 +74,7 @@ TEST(InstructionParse, Invalid_Format_TooManyTokens) {
 TEST(InstructionParse, Branch_Type) {
     Instruction inst("BEQ R1, R2, MY_LABEL");
     EXPECT_TRUE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::BEQ);
+    EXPECT_EQ(inst.opcode, OpCode::BEQ);
     EXPECT_EQ(inst.rs, "R1");
     EXPECT_EQ(inst.rt, "R2");
     EXPECT_EQ(inst.immediate, "MY_LABEL");
@@ -85,7 +85,7 @@ TEST(InstructionParse, Branch_Type) {
 TEST(InstructionParse, Jump_Type_JAL) {
     Instruction inst("JAL R5, DO_STUFF");
     EXPECT_TRUE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::JAL);
+    EXPECT_EQ(inst.opcode, OpCode::JAL);
     EXPECT_EQ(inst.rd, "R5");
     EXPECT_EQ(inst.immediate, "DO_STUFF");
     EXPECT_EQ(inst.rs, "");
@@ -96,5 +96,5 @@ TEST(InstructionParse, Jump_Type_JAL) {
 TEST(InstructionParse, NOP_Type) {
     Instruction inst("NOP");
     EXPECT_TRUE(inst.isValid());
-    EXPECT_EQ(inst.opcode, Instruction::OpCode::NOP);
+    EXPECT_EQ(inst.opcode, OpCode::NOP);
 }

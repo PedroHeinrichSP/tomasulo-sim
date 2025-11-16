@@ -5,7 +5,7 @@
 #include <algorithm> 
 #include <regex>
 
-const std::map<std::string, Instruction::OpCode> Instruction::opcodeMap = {
+const std::map<std::string, OpCode> Instruction::opcodeMap = {
     {"NOP", OpCode::NOP},
     {"ADD", OpCode::ADD},
     {"SUB", OpCode::SUB},
