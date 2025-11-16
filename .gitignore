@@ -39,3 +39,26 @@
 
 # debug information files
 *.dwo
+
+# Build directories
+build/
+*/build/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cbp
+compile_commands.json
+
+# Project-specific executables
+run_unit_tests
+TomasuloSim
+
+# IDE and user-specific files (QtCreator, VSCode, etc.)
+.pro.user
+.pro.user.
+CMakeLists.txt.user
+.vscode/
+.idea/
