@@ -3,6 +3,9 @@
 
 #include <string>
 #include <unordered_map>
+#include <vector>
+
+#define NO_PRODUCER -1
 
 /*
  * Representa o conjunto de registradores:
@@ -11,15 +14,18 @@
  */
 
 class RegisterFile {
-    public:
-        std::unordered_map<std::string, float> values;
-        std::unordered_map<std::string, std::string> status; // reg -> produtor
-
     private:
-        // TODO:
-        // - read()
-        // - write()
-        // - clear()
+        std::unordered_map<std::string, float> values;
+        std::unordered_map<std::string, int> status; // reg -> produtor
+
+    public:
+
+        void clear(const std::vector<std::string>& regNames);
+        int getProducer(const std::string& regName);
+        float getValue(const std::string& regName);
+        void setProducer(const std::string& regName, int robIndex);
+        void writeValue(const std::string& regName, float value);
+        void onCommit(const std::string& regName, int robIndex);
 };
 
 #endif // REGISTER_FILE_H

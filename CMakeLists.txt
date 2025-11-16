@@ -45,6 +45,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(run_unit_tests
     tests/test_instruction.cpp
+    tests/test_register_file.cpp
     ${SIMULATOR_SOURCES}
 )
 
