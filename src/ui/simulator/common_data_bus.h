@@ -11,18 +11,16 @@
  */
 
 struct CDBMessage {
-    std::string tag;
+    int tag;
     float value;
 };
 
 class CommonDataBus {
+
     public:
         std::vector<CDBMessage> messages;
-
-    private:
-        // TODO:
-        // - broadcast()
-        // - clearCycle()
+        void broadcast(int tag, float value);
+        void clear();
 };
 
 #endif // COMMON_DATA_BUS_H

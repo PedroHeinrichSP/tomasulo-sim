@@ -47,6 +47,8 @@ add_executable(run_unit_tests
     tests/test_instruction.cpp
     tests/test_register_file.cpp
     tests/test_reorder_buffer.cpp
+    tests/test_common_data_bus.cpp
+    tests/test_reservation_station.cpp
     ${SIMULATOR_SOURCES}
 )
 
