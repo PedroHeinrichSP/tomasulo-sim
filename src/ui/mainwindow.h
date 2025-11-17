@@ -23,7 +23,6 @@ private slots:
     void onResetClicked();
 
     void onActionAbrirTriggered();
-    void onActionPreferenciasTriggered();
     void onActionSairTriggered();
     void onActionSobreTriggered();
 

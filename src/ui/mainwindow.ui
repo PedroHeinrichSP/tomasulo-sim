@@ -48,7 +48,6 @@
         <attribute name="title"><string>Logs</string></attribute>
         <layout class="QVBoxLayout"><item><widget class="QPlainTextEdit" name="txtLog"><property name="readOnly"><bool>true</bool></property></widget></item></layout>
        </widget>
-
        <!-- Nova aba: Preferências -->
        <widget class="QWidget" name="tabSettings">
         <attribute name="title"><string>Preferências</string></attribute>
@@ -80,19 +79,27 @@
     </item>
    </layout>
   </widget>
+    <!-- MENU SUPERIOR -->
+    <widget class="QMenuBar" name="menubar">
+     <widget class="QMenu" name="menuArquivo">
+        <property name="title"><string>Arquivo</string></property>
+        <addaction name="actionAbrir"/>
+        <addaction name="actionSair"/>
+     </widget>
+     <widget class="QMenu" name="menuExibir">
+        <property name="title"><string>Exibir</string></property>
+     </widget>
+     <widget class="QMenu" name="menuAjuda">
+        <property name="title"><string>Ajuda</string></property>
+        <addaction name="actionSobre"/>
+     </widget>
+     <addaction name="menuArquivo"/>
+     <addaction name="menuExibir"/>
+     <addaction name="menuAjuda"/>
+    </widget>
 
-  <!-- MENU SUPERIOR -->
-  <widget class="QMenuBar" name="menubar">
-   <addaction name="menuArquivo"/>
-   <addaction name="menuExibir"/>
-   <addaction name="menuAjuda"/>
-  </widget>
-
-  <action name="actionAbrir">
+    <action name="actionAbrir">
    <property name="text"><string>Abrir programa...</string></property>
-  </action>
-  <action name="actionPreferencias">
-   <property name="text"><string>Preferências</string></property>
   </action>
   <action name="actionSair">
    <property name="text"><string>Sair</string></property>
@@ -100,22 +107,6 @@
   <action name="actionSobre">
    <property name="text"><string>Sobre o simulador</string></property>
   </action>
-
-  <widget class="QMenu" name="menuArquivo">
-   <property name="title"><string>Arquivo</string></property>
-   <addaction name="actionAbrir"/>
-   <addaction name="actionPreferencias"/>
-   <addaction name="actionSair"/>
-  </widget>
-
-  <widget class="QMenu" name="menuExibir">
-   <property name="title"><string>Exibir</string></property>
-  </widget>
-
-  <widget class="QMenu" name="menuAjuda">
-   <property name="title"><string>Ajuda</string></property>
-   <addaction name="actionSobre"/>
-  </widget>
  </widget>
  <resources/>
  <connections/>

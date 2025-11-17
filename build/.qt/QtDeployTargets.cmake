@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_TomasuloSim_FILE /home/Heinrich/tomasulo-sim/build/TomasuloSim)
+set(__QT_DEPLOY_TARGET_TomasuloSim_TYPE EXECUTABLE)
