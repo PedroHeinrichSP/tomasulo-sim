@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/Heinrich/tomasulo-sim/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
