@@ -222,6 +222,10 @@
 		"/usr/lib64/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
 		"/usr/lib64/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake",
 		"/usr/lib64/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake",
+		"/usr/share/cmake/Modules/FetchContent.cmake",
+		"/usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake",
+		"/usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in",
+		"/usr/share/cmake/Modules/GoogleTest.cmake",
 		"/home/Heinrich/tomasulo-sim/src/ui/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/Heinrich/tomasulo-sim",
@@ -234,6 +238,48 @@
 			"/home/Heinrich/tomasulo-sim/src/ui/mainwindow.h",
 			"MU",
 			"YPKJ5OE7LN/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h",
+			"MU",
+			"LMO2QKOKEK/moc_common_data_bus.cpp",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.h",
+			"MU",
+			"LMO2QKOKEK/moc_instruction.cpp",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h",
+			"MU",
+			"LMO2QKOKEK/moc_register_file.cpp",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h",
+			"MU",
+			"LMO2QKOKEK/moc_reorder_buffer.cpp",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.h",
+			"MU",
+			"LMO2QKOKEK/moc_reservation_station.cpp",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h",
+			"MU",
+			"LMO2QKOKEK/moc_simulator_utils.cpp",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.h",
+			"MU",
+			"LMO2QKOKEK/moc_tomasulo_core.cpp",
 			null
 		]
 	],
@@ -250,6 +296,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"/home/Heinrich/tomasulo-sim/src/ui/simulator",
 		"/usr/include/qt6/QtWidgets",
 		"/usr/include/qt6",
 		"/usr/include/qt6/QtCore",
@@ -298,7 +345,42 @@
 	"SOURCES" : 
 	[
 		[ "/home/Heinrich/tomasulo-sim/src/main.cpp", "MU", null ],
-		[ "/home/Heinrich/tomasulo-sim/src/ui/mainwindow.cpp", "MU", null ]
+		[ "/home/Heinrich/tomasulo-sim/src/ui/mainwindow.cpp", "MU", null ],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
