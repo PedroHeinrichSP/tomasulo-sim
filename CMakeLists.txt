@@ -8,12 +8,57 @@ set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
+set(SIMULATOR_SOURCES
+    src/ui/simulator/common_data_bus.cpp
+    src/ui/simulator/instruction.cpp
+    src/ui/simulator/register_file.cpp
+    src/ui/simulator/reorder_buffer.cpp
+    src/ui/simulator/reservation_station.cpp
+    src/ui/simulator/simulator_utils.cpp
+    src/ui/simulator/tomasulo_core.cpp
+)
+
 add_executable(TomasuloSim
     src/main.cpp
     src/ui/mainwindow.cpp
     src/ui/mainwindow.h
     src/ui/mainwindow.ui
     src/ui/resources.qrc
+    
+    ${SIMULATOR_SOURCES}
 )
 
+target_include_directories(TomasuloSim PRIVATE 
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/ui/simulator"
+)
 target_link_libraries(TomasuloSim PRIVATE Qt6::Widgets)
+
+enable_testing()
+
+include(FetchContent)
+FetchContent_Declare(
+    googletest
+    URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+)
+
+FetchContent_MakeAvailable(googletest)
+
+add_executable(run_unit_tests
+    tests/test_instruction.cpp
+    tests/test_register_file.cpp
+    tests/test_reorder_buffer.cpp
+    tests/test_common_data_bus.cpp
+    tests/test_reservation_station.cpp
+    ${SIMULATOR_SOURCES}
+)
+
+target_include_directories(run_unit_tests PRIVATE 
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/ui/simulator"
+)
+
+target_link_libraries(run_unit_tests PRIVATE
+    gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(run_unit_tests)
