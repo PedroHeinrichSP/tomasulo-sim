@@ -1,7 +1,7 @@
 #include "register_file.h"
 #include <stdexcept>
 
-void RegisterFile::clear(const std::vector<std::string>& regNames) {
+void RegisterFile::innit(const std::vector<std::string>& regNames) {
 
     values.clear();
     status.clear();
@@ -11,6 +11,14 @@ void RegisterFile::clear(const std::vector<std::string>& regNames) {
         status[reg] = NO_PRODUCER;
     }
 }
+
+
+void RegisterFile::clear() {
+    values.clear();
+    status.clear();
+
+}
+
 
 int RegisterFile::getProducer(const std::string& regName) {
 

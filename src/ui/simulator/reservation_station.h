@@ -15,13 +15,14 @@ struct RSEntry {
     int robIndex = -1; // Para qual entrada do ROB esta RS está trabalhando
 
     // Operandos (Vj, Vk) ou Produtores (Qj, Qk)
-    float Vj = 0, Vk = 0;   // Valores (se prontos)
+    float Vj = 0, Vk = 0, imm = 0;   // Valores (se prontos)
     int Qj = NO_PRODUCER;   // Tag do produtor (se esperando por Vj)
     int Qk = NO_PRODUCER;   // Tag do produtor (se esperando por Vk)
 
     // Estado da execução (para o TomasuloCore)
     int cyclesLeft = 0; // Quantos ciclos faltam para executar
 
+    void clear();
 };
 
 
@@ -40,7 +41,8 @@ public:
     RSEntry* findFreeSlot();
     void issue(RSEntry* slot, OpCode opcode, int rob_index,
                int qj_tag, float vj_val,
-               int qk_tag, float vk_val);
+               int qk_tag, float vk_val,
+               float immediate = 0.0f);
     void registerListener(RSEntry* entry, int tagToWaitFor);
     void snoopPool(int tag, float value);
     std::vector<RSEntry>& getEntries();

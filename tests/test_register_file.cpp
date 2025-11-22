@@ -9,11 +9,12 @@ protected:
 
     // Roda antes de CADA teste
     void SetUp() override {
-        regFile.clear(regNames);
+        // CORREÇÃO: Usamos init() para criar a estrutura inicial
+        regFile.innit(regNames);
     }
 };
 
-// Teste 1: Estado Inicial (após o clear())
+// Teste 1: Estado Inicial (após o init())
 TEST_F(RegisterFileTest, InitialState) {
     // Verifica se os valores iniciais são 0.0
     EXPECT_EQ(regFile.getValue("R1"), 0.0f);

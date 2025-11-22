@@ -14,6 +14,7 @@ void ReservationStation::clear() {
     entries.resize(size);
 
     for(int c = 0; c < size; c++){
+        entries[c].clear();
         entries[c].name = poolName + std::to_string(c);
     }
 
@@ -32,12 +33,13 @@ RSEntry* ReservationStation::findFreeSlot() {
 
 void ReservationStation::issue(RSEntry* slot, OpCode opcode, int rob_index,
                                int qj_tag, float vj_val,
-                               int qk_tag, float vk_val) {
+                               int qk_tag, float vk_val,
+                               float immediate) {
 
     slot->busy = true;
     slot->op = opcode;
     slot->robIndex = rob_index;
-
+    slot->imm = immediate;
 
     slot->Qj = qj_tag;
     if(qj_tag == NO_PRODUCER) slot->Vj = vj_val;
@@ -70,7 +72,9 @@ void ReservationStation::snoopPool(int tag, float value) {
         if (entry->Qj == tag) {
             entry->Vj = value;
             entry->Qj = NO_PRODUCER;
-        }else{
+        }
+        
+        if(entry->Qk == tag){
             entry->Vk = value;
             entry->Qk = NO_PRODUCER;
         }
@@ -82,4 +86,13 @@ void ReservationStation::snoopPool(int tag, float value) {
 
 std::vector<RSEntry>& ReservationStation::getEntries() {
     return entries;
+}
+
+void RSEntry::clear() {
+    busy = false;
+    op = OpCode::INVALID;
+    robIndex = -1;
+    Vj = Vk = 0.0f;
+    Qj = Qk = NO_PRODUCER;
+    cyclesLeft = 0;
 }

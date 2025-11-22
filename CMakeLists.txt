@@ -43,12 +43,19 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.txt
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+
 add_executable(run_unit_tests
     tests/test_instruction.cpp
     tests/test_register_file.cpp
     tests/test_reorder_buffer.cpp
     tests/test_common_data_bus.cpp
     tests/test_reservation_station.cpp
+    tests/test_tomasulo_core.cpp
+    tests/test_step_by_step.cpp
+    tests/test_branch_logic.cpp
     ${SIMULATOR_SOURCES}
 )
 

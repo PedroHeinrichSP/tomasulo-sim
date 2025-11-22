@@ -19,8 +19,9 @@ class RegisterFile {
 
     public:
 
-        void clear(const std::vector<std::string>& regNames);
-        int getProducer(const std::string& regName);
+        void clear();
+        void innit(const std::vector<std::string> &regNames);
+        int getProducer(const std::string &regName);
         float getValue(const std::string& regName);
         void setProducer(const std::string& regName, int robIndex);
         void writeValue(const std::string& regName, float value);
