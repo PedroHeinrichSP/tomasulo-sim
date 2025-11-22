@@ -10,6 +10,20 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /home/Heinrich/tomasulo-sim/src/ui/mainwindow.h \
   /home/Heinrich/tomasulo-sim/src/ui/mainwindow.ui \
   /home/Heinrich/tomasulo-sim/src/ui/resources.qrc \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.h \
   /usr/bin/cmake \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -602,12 +616,16 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
   /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake \
   /usr/share/cmake/Modules/Compiler/GNU.cmake \
+  /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake \
+  /usr/share/cmake/Modules/FetchContent.cmake \
+  /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in \
   /usr/share/cmake/Modules/FindOpenGL.cmake \
   /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake \
   /usr/share/cmake/Modules/FindPackageMessage.cmake \
   /usr/share/cmake/Modules/FindThreads.cmake \
   /usr/share/cmake/Modules/FindVulkan.cmake \
   /usr/share/cmake/Modules/GNUInstallDirs.cmake \
+  /usr/share/cmake/Modules/GoogleTest.cmake \
   /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
   /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
   /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
@@ -2327,8 +2345,6 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp.o:
 
 /usr/lib64/libGLdispatch.so.0:
 
-/usr/lib64/libGLX.so:
-
 /usr/lib64/libEGL.so.1:
 
 /usr/lib64/gcc/x86_64-suse-linux/15/libgcc.a:
@@ -2449,8 +2465,6 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp.o:
 
 /usr/include/c++/15/sstream:
 
-/usr/include/c++/15/istream:
-
 /usr/include/c++/15/cwctype:
 
 /usr/include/c++/15/bits/sstream.tcc:
@@ -2553,15 +2567,13 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake:
 
-/usr/include/qt6/QtCore/qtmochelpers.h:
-
-/usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
-
 /usr/share/cmake/Modules/GNUInstallDirs.cmake:
 
 /usr/share/cmake/Modules/FindVulkan.cmake:
 
 /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:
+
+/usr/share/cmake/Modules/FetchContent.cmake:
 
 /usr/include/qt6/QtWidgets/QMessageBox:
 
@@ -2661,11 +2673,25 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake:
 
-/usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h:
+/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
 
-/usr/include/c++/15/cstdio:
+/usr/include/qt6/QtGui/qtextcursor.h:
 
-/usr/include/c++/15/chrono:
+/usr/lib64/cmake/Qt6DBus/Qt6DBusTargets.cmake:
+
+/usr/lib64/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
+
+/usr/lib64/libicudata.so.77:
+
+/usr/lib64/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
+
+/usr/lib64/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
+
+/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
+
+/usr/include/c++/15/bits/fs_ops.h:
+
+/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake:
 
 /usr/include/c++/15/tr1/special_function_util.h:
 
@@ -2674,14 +2700,6 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 /usr/include/c++/15/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/15/tr1/legendre_function.tcc:
-
-/usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h:
-
-/usr/include/qt6/QtCore/qtcoreexports.h:
-
-/usr/include/qt6/QtWidgets/qrubberband.h:
-
-/usr/include/c++/15/tr1/bessel_function.tcc:
 
 /usr/include/c++/15/codecvt:
 
@@ -2779,27 +2797,13 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/include/qt6/QtCore/qline.h:
 
-/usr/include/qt6/QtGui/qtextlayout.h:
-
-/usr/include/qt6/QtGui/qevent.h:
-
-/usr/include/qt6/QtCore/qpropertyanimation.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/include/qt6/QtWidgets/qtabwidget.h:
-
-/usr/lib64/cmake/Qt6/QtPublicGitHelpers.cmake:
+/usr/include/c++/15/chrono:
 
 /usr/include/qt6/QtGui/qpen.h:
 
 /usr/include/c++/15/bits/unordered_set.h:
 
 /usr/include/c++/15/bits/uniform_int_dist.h:
-
-/usr/include/c++/15/unordered_set:
-
-/usr/include/c++/15/tr1/beta_function.tcc:
 
 /usr/include/c++/15/bits/functexcept.h:
 
@@ -2857,9 +2861,9 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/include/c++/15/bits/stl_heap.h:
 
-/usr/include/c++/15/backward/auto_ptr.h:
-
 /usr/include/c++/15/bits/exception_defines.h:
+
+/usr/include/c++/15/backward/auto_ptr.h:
 
 /usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake:
 
@@ -2879,17 +2883,11 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/include/c++/15/bits/ptr_traits.h:
 
-/usr/include/c++/15/vector:
-
 /usr/include/c++/15/clocale:
 
 /usr/include/c++/15/bits/stl_algobase.h:
 
 /usr/include/c++/15/bits/stl_relops.h:
-
-/usr/lib64/gcc/x86_64-suse-linux/15/crtend.o:
-
-/usr/include/c++/15/bits/cxxabi_forced.h:
 
 /usr/include/c++/15/concepts:
 
@@ -2901,23 +2899,19 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/lib64/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
 
-/usr/include/c++/15/typeinfo:
-
-/usr/include/bits/wctype-wchar.h:
-
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/bits/types/clockid_t.h:
-
 /usr/include/c++/15/ios:
 
 /usr/include/c++/15/bits/std_abs.h:
 
-/usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h:
-
 /usr/include/c++/15/exception:
 
 /usr/include/c++/15/backward/binders.h:
+
+/usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h:
+
+/usr/include/qt6/QtCore/qtcoreexports.h:
+
+/usr/include/qt6/QtWidgets/qrubberband.h:
 
 /usr/lib64/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake:
 
@@ -2931,51 +2925,45 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/include/linux/sched/types.h:
 
-/usr/include/qt6/QtWidgets/QLabel:
+/usr/include/c++/15/bits/ios_base.h:
 
-/usr/include/bits/types/__FILE.h:
+/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake:
 
-/usr/include/linux/posix_types.h:
+/usr/include/c++/15/bits/uses_allocator.h:
 
-/usr/include/qt6/QtCore/q23utility.h:
+/usr/include/c++/15/bits/new_allocator.h:
 
-/usr/include/c++/15/tr1/exp_integral.tcc:
+/usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake:
 
-/usr/include/qt6/QtCore/qtaggedpointer.h:
+/usr/lib64/cmake/Qt6Gui/Qt6GuiDependencies.cmake:
 
-/usr/include/asm/errno.h:
+/usr/include/bits/cpu-set.h:
 
-/usr/include/bits/thread-shared-types.h:
+/usr/include/c++/15/bits/hash_bytes.h:
 
-/usr/include/c++/15/iterator:
+/usr/include/c++/15/algorithm:
 
-/usr/include/qt6/QtCore/qbasicatomic.h:
+/usr/include/qt6/QtCore/qcontainertools_impl.h:
 
-/usr/include/c++/15/bits/memory_resource.h:
+CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 
-/usr/include/c++/15/bits/stl_function.h:
+/usr/include/c++/15/ext/type_traits.h:
 
-/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/c++/15/bits/functional_hash.h:
 
-/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake:
-
-/usr/include/qt6/QtCore/q20type_traits.h:
-
-/usr/include/c++/15/bits/stl_algo.h:
-
-/usr/include/bits/types/time_t.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/lib64/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
-
-/usr/include/bits/select.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
+/usr/include/errno.h:
 
 /usr/include/bits/pthreadtypes.h:
 
 /usr/lib64/cmake/Qt6/QtPublicToolHelpers.cmake:
+
+/usr/include/qt6/QtCore/qtmochelpers.h:
+
+/usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.cpp:
+
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:
 
 /usr/lib64/libfreetype.so.6:
 
@@ -2995,169 +2983,13 @@ TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
 
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/qt6/QtWidgets/qapplication.h:
-
-/usr/include/c++/15/bits/unique_ptr.h:
-
-/usr/include/c++/15/bits/move.h:
-
-/usr/include/qt6/QtGui/qtgui-config.h:
-
-/usr/include/bits/stdint-least.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/15/type_traits:
-
-/usr/lib64/cmake/Qt6/Qt6ConfigExtras.cmake:
-
-/usr/include/bits/floatn.h:
-
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/c++/15/bits/predefined_ops.h:
-
-/home/Heinrich/tomasulo-sim/src/main.cpp:
-
-/usr/include/qt6/QtWidgets/qmainwindow.h:
-
-/usr/include/c++/15/list:
-
-/usr/include/bits/types/struct_timeval.h:
-
-/usr/include/c++/15/bits/hashtable.h:
-
-/usr/include/qt6/QtWidgets/qabstractitemview.h:
-
-/usr/include/qt6/QtWidgets/QPushButton:
-
-/usr/include/c++/15/debug/assertions.h:
-
-TomasuloSim_autogen/moc_predefs.h:
-
-/usr/include/c++/15/bits/refwrap.h:
-
-/usr/include/c++/15/map:
-
-/usr/lib64/cmake/Qt6/QtFeature.cmake:
-
-/usr/include/qt6/QtGui/qvectornd.h:
-
-/usr/include/bits/types/__locale_t.h:
-
-/usr/include/c++/15/bits/utility.h:
-
-/usr/include/bits/types/error_t.h:
-
-/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake:
-
-/usr/include/c++/15/bits/ostream_insert.h:
-
-/usr/include/qt6/QtCore/qstringalgorithms.h:
-
-/usr/include/qt6/QtGui/qfontinfo.h:
-
-/usr/lib64/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
-
-/usr/include/c++/15/pstl/execution_defs.h:
-
-/home/Heinrich/tomasulo-sim/CMakeLists.txt:
-
-/usr/include/asm/posix_types_64.h:
-
-/usr/include/bits/types/mbstate_t.h:
-
-/usr/include/sys/single_threaded.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/c++/15/version:
-
-/usr/include/c++/15/climits:
-
-/usr/include/c++/15/bits/vector.tcc:
-
-/usr/include/qt6/QtCore/qcompare.h:
-
-/usr/lib64/libQt6Widgets.so.6.10.0:
-
-/usr/include/c++/15/bits/exception_ptr.h:
-
-/usr/lib64/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/asm-generic/bitsperlong.h:
-
-/home/Heinrich/tomasulo-sim/src/ui/mainwindow.h:
-
-/usr/include/qt6/QtCore/qscopeguard.h:
-
-/usr/include/asm/types.h:
-
-/usr/include/c++/15/bits/node_handle.h:
-
-/usr/include/c++/15/bits/uses_allocator_args.h:
-
-/usr/include/c++/15/bits/chrono.h:
-
-/usr/include/qt6/QtWidgets/qtwidgets-config.h:
-
-CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
-
-/usr/include/qt6/QtCore/qpoint.h:
-
-/usr/include/bits/posix2_lim.h:
-
-/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
-
-/usr/include/c++/15/bits/locale_facets_nonio.h:
-
-/home/Heinrich/tomasulo-sim/src/ui/mainwindow.cpp:
-
-/usr/include/c++/15/bits/stream_iterator.h:
-
-/usr/include/c++/15/bits/stl_iterator.h:
-
-/usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/qt6/QtWidgets/qabstractbutton.h:
-
-/usr/include/bits/types/wint_t.h:
-
-/usr/include/c++/15/bits/allocator.h:
-
-/usr/lib64/crti.o:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/c++/15/bit:
-
-/usr/include/bits/types/__sigset_t.h:
-
-/usr/include/qt6/QtGui/qabstracttextdocumentlayout.h:
-
-/usr/include/asm-generic/int-ll64.h:
-
-/usr/include/qt6/QtCore/qxptype_traits.h:
+/usr/include/asm/errno.h:
 
 /usr/lib64/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
 
 /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h:
 
-/usr/include/qt6/QtCore/qtimezone.h:
-
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/qt6/QtCore/qfunctionpointer.h:
-
-/usr/include/c++/15/bits/invoke.h:
-
-/usr/include/bits/timex.h:
-
-/usr/include/qt6/QtCore/qstdlibdetection.h:
+/usr/include/c++/15/cstdio:
 
 /usr/include/c++/15/cassert:
 
@@ -3179,15 +3011,65 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /usr/include/qt6/QtCore/qcontainerinfo.h:
 
+/usr/include/bits/types/clockid_t.h:
+
+/usr/include/bits/wctype-wchar.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/c++/15/typeinfo:
+
+/usr/include/asm/posix_types_64.h:
+
+/usr/lib64/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
+
+/usr/include/c++/15/pstl/execution_defs.h:
+
+/home/Heinrich/tomasulo-sim/CMakeLists.txt:
+
+/usr/include/c++/15/bits/allocator.h:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/include/c++/15/type_traits:
+
+/usr/lib64/cmake/Qt6/Qt6ConfigExtras.cmake:
+
+/usr/include/bits/floatn.h:
+
+/usr/include/qt6/QtGui/qtextlayout.h:
+
+/usr/include/qt6/QtGui/qevent.h:
+
+/usr/include/qt6/QtCore/qpropertyanimation.h:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/qt6/QtWidgets/qtabwidget.h:
+
+/usr/lib64/cmake/Qt6/QtPublicGitHelpers.cmake:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.cpp:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h:
+
+/usr/include/c++/15/bits/predefined_ops.h:
+
+/home/Heinrich/tomasulo-sim/src/main.cpp:
+
+/usr/include/qt6/QtWidgets/qmainwindow.h:
+
+/usr/include/c++/15/istream:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h:
+
+/usr/include/bits/types/locale_t.h:
+
 /usr/include/c++/15/bits/ostream.h:
 
 /usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:
 
 /usr/include/c++/15/bits/stl_raw_storage_iter.h:
-
-/usr/include/qt6/QtWidgets/qtableview.h:
-
-/usr/include/qt6/QtCore/qassert.h:
 
 /usr/lib64/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
 
@@ -3196,6 +3078,244 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 /usr/include/c++/15/memory:
 
 /usr/include/qt6/QtCore/qbytearray.h:
+
+/usr/include/bits/pthread_stack_min-dynamic.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp:
+
+/usr/include/asm/types.h:
+
+/usr/include/c++/15/bits/node_handle.h:
+
+/usr/include/qt6/QtWidgets/qtwidgets-config.h:
+
+CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
+
+/usr/include/qt6/QtCore/qpoint.h:
+
+/usr/include/qt6/QtWidgets/QLabel:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/lib64/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
+
+/usr/include/bits/select.h:
+
+/usr/lib64/libGLX.so:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake:
+
+/usr/include/qt6/QtCore/qlist.h:
+
+/usr/include/c++/15/tr1/bessel_function.tcc:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/c++/15/ext/concurrence.h:
+
+/usr/include/c++/15/ext/atomicity.h:
+
+/usr/include/c++/15/bits/stl_iterator_base_funcs.h:
+
+/usr/include/qt6/QtWidgets/qapplication.h:
+
+/usr/include/c++/15/bits/unique_ptr.h:
+
+/usr/include/c++/15/bits/move.h:
+
+/usr/include/qt6/QtGui/qtgui-config.h:
+
+/usr/include/bits/stdint-least.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/15/bits/locale_facets_nonio.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/mainwindow.cpp:
+
+/usr/include/c++/15/bits/stream_iterator.h:
+
+/usr/include/c++/15/bits/stl_iterator.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/qt6/QtWidgets/qabstractbutton.h:
+
+/usr/include/bits/types/wint_t.h:
+
+/usr/include/bits/endianness.h:
+
+CMakeFiles/4.1.2/CMakeSystem.cmake:
+
+/usr/include/c++/15/bits/stringfwd.h:
+
+/usr/include/c++/15/bits/erase_if.h:
+
+/usr/include/qt6/QtGui/qpaintdevice.h:
+
+/usr/include/c++/15/bits/utility.h:
+
+/usr/include/bits/types/error_t.h:
+
+/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake:
+
+/usr/include/c++/15/bits/ostream_insert.h:
+
+/usr/include/qt6/QtCore/qstringalgorithms.h:
+
+/usr/include/qt6/QtGui/qfontinfo.h:
+
+/usr/include/bits/types/mbstate_t.h:
+
+/usr/include/bits/uio_lim.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.cpp:
+
+/usr/include/c++/15/bits/concept_check.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/mainwindow.h:
+
+/usr/include/qt6/QtCore/qscopeguard.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h:
+
+/usr/include/c++/15/tr1/beta_function.tcc:
+
+/usr/include/c++/15/unordered_set:
+
+/usr/include/qt6/QtGui/qabstracttextdocumentlayout.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/qt6/QtCore/qxptype_traits.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/15/filesystem:
+
+/usr/include/qt6/QtCore/qshareddata_impl.h:
+
+/usr/include/bits/struct_rwlock.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/qt6/QtCore/qconfig.h:
+
+/usr/include/sys/single_threaded.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/lib64/gcc/x86_64-suse-linux/15/crtend.o:
+
+/usr/include/c++/15/bits/cxxabi_forced.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.h:
+
+/usr/include/c++/15/bits/uses_allocator_args.h:
+
+/usr/include/c++/15/bits/chrono.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.cpp:
+
+/usr/include/c++/15/cctype:
+
+/usr/include/c++/15/bits/char_traits.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/include/c++/15/climits:
+
+/usr/include/c++/15/bits/vector.tcc:
+
+/usr/include/qt6/QtCore/qcompare.h:
+
+/usr/lib64/libQt6Widgets.so.6.10.0:
+
+/usr/include/c++/15/bits/exception_ptr.h:
+
+/usr/lib64/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
+
+/usr/include/qt6/QtGui/qvectornd.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.cpp:
+
+/usr/include/c++/15/bits/alloc_traits.h:
+
+/usr/include/c++/15/ratio:
+
+/usr/include/c++/15/bits/stl_map.h:
+
+/usr/include/qt6/QtCore/qsharedpointer.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/qt6/QtCore/qtimezone.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/qt6/QtWidgets/QPushButton:
+
+/usr/include/c++/15/debug/assertions.h:
+
+TomasuloSim_autogen/moc_predefs.h:
+
+/usr/include/c++/15/bits/refwrap.h:
+
+/usr/include/c++/15/map:
+
+/usr/include/c++/15/bits/invoke.h:
+
+/usr/include/qt6/QtCore/qfunctionpointer.h:
+
+/usr/lib64/cmake/Qt6/QtFeature.cmake:
+
+/usr/include/c++/15/list:
+
+/usr/include/bits/types/struct_timeval.h:
+
+/usr/include/bits/struct_mutex.h:
+
+/usr/include/c++/15/iterator:
+
+/usr/include/qt6/QtCore/qbasicatomic.h:
+
+/usr/include/qt6/QtWidgets/qabstractitemview.h:
+
+/usr/include/c++/15/bits/hashtable.h:
+
+/usr/include/c++/15/bits/memory_resource.h:
+
+/usr/include/c++/15/bits/stl_function.h:
+
+/usr/include/bits/types/struct_itimerspec.h:
+
+/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake:
+
+/usr/include/qt6/QtCore/q20type_traits.h:
+
+/usr/include/c++/15/bits/stl_algo.h:
+
+/usr/include/bits/types/time_t.h:
+
+/usr/include/bits/thread-shared-types.h:
 
 /usr/lib64/libXau.so.6:
 
@@ -3209,61 +3329,43 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /usr/include/bits/time64.h:
 
-/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
-
-/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
-
-/usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h:
-
-/usr/include/bits/byteswap.h:
-
-/usr/include/bits/setjmp.h:
-
-/usr/include/c++/15/cctype:
-
-/usr/include/c++/15/bits/char_traits.h:
-
-/usr/include/c++/15/ext/concurrence.h:
-
-/usr/include/c++/15/ext/atomicity.h:
+/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake:
 
 /usr/include/bits/errno.h:
 
-/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake:
+/usr/include/qt6/QtCore/qstdlibdetection.h:
 
-/usr/include/c++/15/bits/stl_iterator_base_funcs.h:
+/usr/include/bits/timex.h:
 
-/usr/include/bits/struct_mutex.h:
+/usr/include/c++/15/tr1/exp_integral.tcc:
 
-/usr/include/c++/15/bits/fs_ops.h:
+/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
 
-/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake:
+/usr/include/qt6/QtWidgets/qstyle.h:
 
-/usr/include/c++/15/utility:
+/usr/include/c++/15/bits/streambuf_iterator.h:
 
-/usr/lib64/cmake/Qt6Gui/Qt6GuiDependencies.cmake:
+/usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h:
 
-/usr/include/bits/cpu-set.h:
+/usr/include/qt6/QtCore/qtaggedpointer.h:
 
-/usr/include/c++/15/bits/new_allocator.h:
+/usr/include/qt6/QtCore/qassert.h:
 
-/usr/include/bits/typesizes.h:
+/usr/include/qt6/QtWidgets/qtableview.h:
 
-/usr/include/bits/uintn-identity.h:
+/usr/lib64/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake:
 
-/usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake:
+/usr/include/bits/types/FILE.h:
 
-/usr/include/qt6/QtCore/qlist.h:
+/usr/include/linux/posix_types.h:
 
-/usr/include/c++/15/bits/stringfwd.h:
+/usr/include/qt6/QtCore/q23utility.h:
 
-/usr/include/c++/15/bits/erase_if.h:
+/usr/lib64/crti.o:
 
-/usr/include/qt6/QtGui/qpaintdevice.h:
+/usr/include/c++/15/bit:
 
-CMakeFiles/4.1.2/CMakeSystem.cmake:
-
-/usr/include/bits/endianness.h:
+/usr/include/bits/types/__fpos64_t.h:
 
 /usr/include/c++/15/tr1/poly_laguerre.tcc:
 
@@ -3279,37 +3381,39 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 
 /usr/include/bits/types/__fpos_t.h:
 
-/usr/include/c++/15/bits/ios_base.h:
-
 /usr/include/c++/15/tr1/poly_hermite.tcc:
 
 /usr/lib64/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
 
 /usr/include/bits/types/sigset_t.h:
 
-/usr/include/c++/15/filesystem:
-
-/usr/include/qt6/QtCore/qshareddata_impl.h:
-
-/usr/include/bits/sched.h:
-
-/usr/include/qt6/QtCore/qconfig.h:
-
-/usr/include/bits/struct_rwlock.h:
-
-/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake:
-
-/usr/include/c++/15/bits/uses_allocator.h:
-
 /usr/include/bits/waitflags.h:
 
 /usr/include/qt6/QtCore/qcompilerdetection.h:
 
+/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+
+/usr/include/c++/15/bits/localefwd.h:
+
+/usr/include/qt6/QtCore/qhashfunctions.h:
+
+/usr/include/qt6/QtWidgets/qabstractspinbox.h:
+
+/usr/include/bits/types/struct_timespec.h:
+
+/usr/include/qt6/QtCore/qiterable.h:
+
+/usr/include/c++/15/bits/locale_classes.tcc:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h:
+
+/usr/include/stdio.h:
+
 /usr/include/qt6/QtCore/q20functional.h:
-
-/usr/include/c++/15/bits/concept_check.h:
-
-/usr/include/bits/uio_lim.h:
 
 /usr/lib64/libbrotlicommon.so.1:
 
@@ -3323,27 +3427,17 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 
 /usr/include/qt6/QtCore/qminmax.h:
 
-/usr/include/bits/wordsize.h:
-
-/usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h:
-
-/usr/include/stdio.h:
-
 /usr/include/c++/15/bits/string_view.tcc:
 
 /usr/include/bits/xopen_lim.h:
 
 /usr/include/c++/15/bits/range_access.h:
 
-/usr/include/c++/15/algorithm:
-
-/usr/include/c++/15/bits/hash_bytes.h:
-
-/usr/include/qt6/QtCore/qcontainertools_impl.h:
-
 /usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake:
 
 /usr/include/c++/15/tuple:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.cpp:
 
 /usr/include/c++/15/array:
 
@@ -3353,8 +3447,6 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 
 /usr/include/qt6/QtCore/qobjectdefs_impl.h:
 
-/usr/include/errno.h:
-
 /usr/include/c++/15/bits/atomic_base.h:
 
 /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h:
@@ -3362,6 +3454,8 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 /usr/include/features.h:
 
 /usr/include/qt6/QtCore/q20iterator.h:
+
+/usr/include/c++/15/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/15/streambuf:
 
@@ -3387,8 +3481,6 @@ CMakeFiles/TomasuloSim.dir/src/main.cpp.o:
 
 /usr/lib64/cmake/Qt6/QtFeatureCommon.cmake:
 
-/usr/include/c++/15/bits/alloc_traits.h:
-
 /usr/include/c++/15/bits/algorithmfwd.h:
 
 /usr/include/asm/bitsperlong.h:
@@ -3407,35 +3499,19 @@ CMakeFiles/TomasuloSim.dir/src/main.cpp.o:
 
 /usr/lib64/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
 
-CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
+/usr/include/c++/15/utility:
 
-/usr/include/c++/15/ext/type_traits.h:
+/usr/include/c++/15/vector:
 
-/usr/include/c++/15/bits/functional_hash.h:
+/usr/include/c++/15/version:
 
-/usr/include/c++/15/ratio:
+/usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h:
 
-/usr/include/c++/15/bits/stl_map.h:
+/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
 
-/usr/include/qt6/QtCore/qsharedpointer.h:
+/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
 
-/usr/include/bits/types/locale_t.h:
-
-/usr/include/c++/15/bits/locale_classes.tcc:
-
-/usr/include/bits/types/struct_timespec.h:
-
-/usr/include/qt6/QtCore/qiterable.h:
-
-/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
-
-/usr/include/c++/15/bits/localefwd.h:
-
-/usr/include/qt6/QtCore/qhashfunctions.h:
-
-/usr/include/qt6/QtWidgets/qabstractspinbox.h:
-
-/usr/include/c++/15/bits/atomic_lockfree_defines.h:
+/usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h:
 
 /usr/share/cmake/Modules/CMakeGenericSystem.cmake:
 
@@ -3506,6 +3582,8 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/15/unordered_map:
 
 /usr/include/qt6/QtCore/qarraydatapointer.h:
+
+/usr/share/cmake/Modules/GoogleTest.cmake:
 
 /usr/include/qt6/QtCore/qatomic_cxx11.h:
 
@@ -3653,8 +3731,6 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 
 /usr/include/qt6/QtCore/qspan.h:
 
-/usr/lib64/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
-
 /usr/include/qt6/QtCore/qstringlist.h:
 
 /usr/include/qt6/QtCore/qstringliteral.h:
@@ -3713,6 +3789,10 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 
 /usr/include/qt6/QtCore/qtpreprocessorsupport.h:
 
+/usr/include/qt6/QtWidgets/qabstractslider.h:
+
+/usr/include/qt6/QtCore/qtypeinfo.h:
+
 /usr/include/qt6/QtCore/qttranslation.h:
 
 /usr/include/c++/15/bits/stl_multimap.h:
@@ -3733,9 +3813,9 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 
 /usr/include/qt6/QtCore/qtypes.h:
 
-/usr/include/qt6/QtCore/qalgorithms.h:
-
 /usr/lib64/cmake/Qt6DBus/Qt6DBusMacros.cmake:
+
+/usr/include/qt6/QtCore/qalgorithms.h:
 
 /usr/include/qt6/QtGui/qwindowdefs.h:
 
@@ -3793,12 +3873,6 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 
 /usr/include/qt6/QtWidgets/QTableWidgetItem:
 
-/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:
-
-/usr/include/qt6/QtCore/qtypeinfo.h:
-
-/usr/include/qt6/QtWidgets/qabstractslider.h:
-
 /usr/include/qt6/QtCore/qbytearrayalgorithms.h:
 
 /usr/include/qt6/QtWidgets/qframe.h:
@@ -3816,6 +3890,10 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/15/bits/stl_numeric.h:
 
 /usr/lib64/cmake/Qt6/QtPublicSbomCpeHelpers.cmake:
+
+/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake:
+
+/usr/include/sched.h:
 
 /usr/include/c++/15/tr1/ell_integral.tcc:
 
@@ -3887,11 +3965,17 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 
 /usr/lib64/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
 
+/usr/lib64/cmake/Qt6DBus/Qt6DBusConfig.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicPluginHelpers.cmake:
+
 /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
 
 /usr/include/qt6/QtCore/qtmetamacros.h:
 
 /usr/lib64/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
+
+/usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in:
 
 /usr/lib64/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake:
 
@@ -3942,33 +4026,3 @@ CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/15/variant:
 
 /usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
-
-/usr/include/sched.h:
-
-/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake:
-
-/usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
-
-/usr/include/bits/types/FILE.h:
-
-/usr/lib64/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicPluginHelpers.cmake:
-
-/usr/lib64/cmake/Qt6DBus/Qt6DBusConfig.cmake:
-
-/usr/include/c++/15/bits/streambuf_iterator.h:
-
-/usr/include/qt6/QtWidgets/qstyle.h:
-
-/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
-
-/usr/lib64/libicudata.so.77:
-
-/usr/lib64/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
-
-/usr/lib64/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
-
-/usr/include/qt6/QtGui/qtextcursor.h:
-
-/usr/lib64/cmake/Qt6DBus/Qt6DBusTargets.cmake:

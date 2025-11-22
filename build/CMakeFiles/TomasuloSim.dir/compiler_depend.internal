@@ -11,6 +11,20 @@
  /home/Heinrich/tomasulo-sim/src/ui/mainwindow.h
  /home/Heinrich/tomasulo-sim/src/ui/mainwindow.ui
  /home/Heinrich/tomasulo-sim/src/ui/resources.qrc
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.h
  /usr/bin/cmake
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
@@ -603,12 +617,16 @@
  /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake
  /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake
  /usr/share/cmake/Modules/Compiler/GNU.cmake
+ /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake
+ /usr/share/cmake/Modules/FetchContent.cmake
+ /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in
  /usr/share/cmake/Modules/FindOpenGL.cmake
  /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake
  /usr/share/cmake/Modules/FindPackageMessage.cmake
  /usr/share/cmake/Modules/FindThreads.cmake
  /usr/share/cmake/Modules/FindVulkan.cmake
  /usr/share/cmake/Modules/GNUInstallDirs.cmake
+ /usr/share/cmake/Modules/GoogleTest.cmake
  /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake
  /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake
  /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake

@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/Heinrich/tomasulo-sim/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,6 +185,19 @@ TomasuloSim/fast:
 .PHONY : TomasuloSim/fast
 
 #=============================================================================
+# Target rules for targets named run_unit_tests
+
+# Build rule for target.
+run_unit_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_unit_tests
+.PHONY : run_unit_tests
+
+# fast build rule for target.
+run_unit_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/build
+.PHONY : run_unit_tests/fast
+
+#=============================================================================
 # Target rules for targets named TomasuloSim_autogen_timestamp_deps
 
 # Build rule for target.
@@ -154,6 +222,188 @@ TomasuloSim_autogen: cmake_check_build_system
 TomasuloSim_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim_autogen.dir/build.make CMakeFiles/TomasuloSim_autogen.dir/build
 .PHONY : TomasuloSim_autogen/fast
+
+#=============================================================================
+# Target rules for targets named run_unit_tests_autogen_timestamp_deps
+
+# Build rule for target.
+run_unit_tests_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_unit_tests_autogen_timestamp_deps
+.PHONY : run_unit_tests_autogen_timestamp_deps
+
+# fast build rule for target.
+run_unit_tests_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests_autogen_timestamp_deps.dir/build.make CMakeFiles/run_unit_tests_autogen_timestamp_deps.dir/build
+.PHONY : run_unit_tests_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named run_unit_tests_autogen
+
+# Build rule for target.
+run_unit_tests_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_unit_tests_autogen
+.PHONY : run_unit_tests_autogen
+
+# fast build rule for target.
+run_unit_tests_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests_autogen.dir/build.make CMakeFiles/run_unit_tests_autogen.dir/build
+.PHONY : run_unit_tests_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock_autogen_timestamp_deps
+
+# Build rule for target.
+gmock_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_autogen_timestamp_deps
+.PHONY : gmock_autogen_timestamp_deps
+
+# fast build rule for target.
+gmock_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen_timestamp_deps.dir/build
+.PHONY : gmock_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gmock_autogen
+
+# Build rule for target.
+gmock_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_autogen
+.PHONY : gmock_autogen
+
+# fast build rule for target.
+gmock_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/build
+.PHONY : gmock_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main_autogen_timestamp_deps
+
+# Build rule for target.
+gmock_main_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main_autogen_timestamp_deps
+.PHONY : gmock_main_autogen_timestamp_deps
+
+# fast build rule for target.
+gmock_main_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen_timestamp_deps.dir/build
+.PHONY : gmock_main_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main_autogen
+
+# Build rule for target.
+gmock_main_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main_autogen
+.PHONY : gmock_main_autogen
+
+# fast build rule for target.
+gmock_main_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/build
+.PHONY : gmock_main_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest_autogen_timestamp_deps
+
+# Build rule for target.
+gtest_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_autogen_timestamp_deps
+.PHONY : gtest_autogen_timestamp_deps
+
+# fast build rule for target.
+gtest_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_autogen_timestamp_deps.dir/build
+.PHONY : gtest_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gtest_autogen
+
+# Build rule for target.
+gtest_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_autogen
+.PHONY : gtest_autogen
+
+# fast build rule for target.
+gtest_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/build
+.PHONY : gtest_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main_autogen_timestamp_deps
+
+# Build rule for target.
+gtest_main_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main_autogen_timestamp_deps
+.PHONY : gtest_main_autogen_timestamp_deps
+
+# fast build rule for target.
+gtest_main_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen_timestamp_deps.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen_timestamp_deps.dir/build
+.PHONY : gtest_main_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main_autogen
+
+# Build rule for target.
+gtest_main_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main_autogen
+.PHONY : gtest_main_autogen
+
+# fast build rule for target.
+gtest_main_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/build
+.PHONY : gtest_main_autogen/fast
 
 TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.o: TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp.o
 .PHONY : TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.o
@@ -203,6 +453,30 @@ TomasuloSim_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.s
 .PHONY : TomasuloSim_autogen/mocs_compilation.cpp.s
 
+run_unit_tests_autogen/mocs_compilation.o: run_unit_tests_autogen/mocs_compilation.cpp.o
+.PHONY : run_unit_tests_autogen/mocs_compilation.o
+
+# target to build an object file
+run_unit_tests_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/run_unit_tests_autogen/mocs_compilation.cpp.o
+.PHONY : run_unit_tests_autogen/mocs_compilation.cpp.o
+
+run_unit_tests_autogen/mocs_compilation.i: run_unit_tests_autogen/mocs_compilation.cpp.i
+.PHONY : run_unit_tests_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+run_unit_tests_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/run_unit_tests_autogen/mocs_compilation.cpp.i
+.PHONY : run_unit_tests_autogen/mocs_compilation.cpp.i
+
+run_unit_tests_autogen/mocs_compilation.s: run_unit_tests_autogen/mocs_compilation.cpp.s
+.PHONY : run_unit_tests_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+run_unit_tests_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/run_unit_tests_autogen/mocs_compilation.cpp.s
+.PHONY : run_unit_tests_autogen/mocs_compilation.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -251,6 +525,315 @@ src/ui/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.s
 .PHONY : src/ui/mainwindow.cpp.s
 
+src/ui/simulator/common_data_bus.o: src/ui/simulator/common_data_bus.cpp.o
+.PHONY : src/ui/simulator/common_data_bus.o
+
+# target to build an object file
+src/ui/simulator/common_data_bus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/common_data_bus.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/common_data_bus.cpp.o
+.PHONY : src/ui/simulator/common_data_bus.cpp.o
+
+src/ui/simulator/common_data_bus.i: src/ui/simulator/common_data_bus.cpp.i
+.PHONY : src/ui/simulator/common_data_bus.i
+
+# target to preprocess a source file
+src/ui/simulator/common_data_bus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/common_data_bus.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/common_data_bus.cpp.i
+.PHONY : src/ui/simulator/common_data_bus.cpp.i
+
+src/ui/simulator/common_data_bus.s: src/ui/simulator/common_data_bus.cpp.s
+.PHONY : src/ui/simulator/common_data_bus.s
+
+# target to generate assembly for a file
+src/ui/simulator/common_data_bus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/common_data_bus.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/common_data_bus.cpp.s
+.PHONY : src/ui/simulator/common_data_bus.cpp.s
+
+src/ui/simulator/instruction.o: src/ui/simulator/instruction.cpp.o
+.PHONY : src/ui/simulator/instruction.o
+
+# target to build an object file
+src/ui/simulator/instruction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/instruction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/instruction.cpp.o
+.PHONY : src/ui/simulator/instruction.cpp.o
+
+src/ui/simulator/instruction.i: src/ui/simulator/instruction.cpp.i
+.PHONY : src/ui/simulator/instruction.i
+
+# target to preprocess a source file
+src/ui/simulator/instruction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/instruction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/instruction.cpp.i
+.PHONY : src/ui/simulator/instruction.cpp.i
+
+src/ui/simulator/instruction.s: src/ui/simulator/instruction.cpp.s
+.PHONY : src/ui/simulator/instruction.s
+
+# target to generate assembly for a file
+src/ui/simulator/instruction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/instruction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/instruction.cpp.s
+.PHONY : src/ui/simulator/instruction.cpp.s
+
+src/ui/simulator/register_file.o: src/ui/simulator/register_file.cpp.o
+.PHONY : src/ui/simulator/register_file.o
+
+# target to build an object file
+src/ui/simulator/register_file.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/register_file.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/register_file.cpp.o
+.PHONY : src/ui/simulator/register_file.cpp.o
+
+src/ui/simulator/register_file.i: src/ui/simulator/register_file.cpp.i
+.PHONY : src/ui/simulator/register_file.i
+
+# target to preprocess a source file
+src/ui/simulator/register_file.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/register_file.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/register_file.cpp.i
+.PHONY : src/ui/simulator/register_file.cpp.i
+
+src/ui/simulator/register_file.s: src/ui/simulator/register_file.cpp.s
+.PHONY : src/ui/simulator/register_file.s
+
+# target to generate assembly for a file
+src/ui/simulator/register_file.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/register_file.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/register_file.cpp.s
+.PHONY : src/ui/simulator/register_file.cpp.s
+
+src/ui/simulator/reorder_buffer.o: src/ui/simulator/reorder_buffer.cpp.o
+.PHONY : src/ui/simulator/reorder_buffer.o
+
+# target to build an object file
+src/ui/simulator/reorder_buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/reorder_buffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/reorder_buffer.cpp.o
+.PHONY : src/ui/simulator/reorder_buffer.cpp.o
+
+src/ui/simulator/reorder_buffer.i: src/ui/simulator/reorder_buffer.cpp.i
+.PHONY : src/ui/simulator/reorder_buffer.i
+
+# target to preprocess a source file
+src/ui/simulator/reorder_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/reorder_buffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/reorder_buffer.cpp.i
+.PHONY : src/ui/simulator/reorder_buffer.cpp.i
+
+src/ui/simulator/reorder_buffer.s: src/ui/simulator/reorder_buffer.cpp.s
+.PHONY : src/ui/simulator/reorder_buffer.s
+
+# target to generate assembly for a file
+src/ui/simulator/reorder_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/reorder_buffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/reorder_buffer.cpp.s
+.PHONY : src/ui/simulator/reorder_buffer.cpp.s
+
+src/ui/simulator/reservation_station.o: src/ui/simulator/reservation_station.cpp.o
+.PHONY : src/ui/simulator/reservation_station.o
+
+# target to build an object file
+src/ui/simulator/reservation_station.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/reservation_station.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/reservation_station.cpp.o
+.PHONY : src/ui/simulator/reservation_station.cpp.o
+
+src/ui/simulator/reservation_station.i: src/ui/simulator/reservation_station.cpp.i
+.PHONY : src/ui/simulator/reservation_station.i
+
+# target to preprocess a source file
+src/ui/simulator/reservation_station.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/reservation_station.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/reservation_station.cpp.i
+.PHONY : src/ui/simulator/reservation_station.cpp.i
+
+src/ui/simulator/reservation_station.s: src/ui/simulator/reservation_station.cpp.s
+.PHONY : src/ui/simulator/reservation_station.s
+
+# target to generate assembly for a file
+src/ui/simulator/reservation_station.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/reservation_station.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/reservation_station.cpp.s
+.PHONY : src/ui/simulator/reservation_station.cpp.s
+
+src/ui/simulator/simulator_utils.o: src/ui/simulator/simulator_utils.cpp.o
+.PHONY : src/ui/simulator/simulator_utils.o
+
+# target to build an object file
+src/ui/simulator/simulator_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/simulator_utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/simulator_utils.cpp.o
+.PHONY : src/ui/simulator/simulator_utils.cpp.o
+
+src/ui/simulator/simulator_utils.i: src/ui/simulator/simulator_utils.cpp.i
+.PHONY : src/ui/simulator/simulator_utils.i
+
+# target to preprocess a source file
+src/ui/simulator/simulator_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/simulator_utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/simulator_utils.cpp.i
+.PHONY : src/ui/simulator/simulator_utils.cpp.i
+
+src/ui/simulator/simulator_utils.s: src/ui/simulator/simulator_utils.cpp.s
+.PHONY : src/ui/simulator/simulator_utils.s
+
+# target to generate assembly for a file
+src/ui/simulator/simulator_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/simulator_utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/simulator_utils.cpp.s
+.PHONY : src/ui/simulator/simulator_utils.cpp.s
+
+src/ui/simulator/tomasulo_core.o: src/ui/simulator/tomasulo_core.cpp.o
+.PHONY : src/ui/simulator/tomasulo_core.o
+
+# target to build an object file
+src/ui/simulator/tomasulo_core.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/tomasulo_core.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/tomasulo_core.cpp.o
+.PHONY : src/ui/simulator/tomasulo_core.cpp.o
+
+src/ui/simulator/tomasulo_core.i: src/ui/simulator/tomasulo_core.cpp.i
+.PHONY : src/ui/simulator/tomasulo_core.i
+
+# target to preprocess a source file
+src/ui/simulator/tomasulo_core.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/tomasulo_core.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/tomasulo_core.cpp.i
+.PHONY : src/ui/simulator/tomasulo_core.cpp.i
+
+src/ui/simulator/tomasulo_core.s: src/ui/simulator/tomasulo_core.cpp.s
+.PHONY : src/ui/simulator/tomasulo_core.s
+
+# target to generate assembly for a file
+src/ui/simulator/tomasulo_core.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TomasuloSim.dir/build.make CMakeFiles/TomasuloSim.dir/src/ui/simulator/tomasulo_core.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/tomasulo_core.cpp.s
+.PHONY : src/ui/simulator/tomasulo_core.cpp.s
+
+tests/test_common_data_bus.o: tests/test_common_data_bus.cpp.o
+.PHONY : tests/test_common_data_bus.o
+
+# target to build an object file
+tests/test_common_data_bus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_common_data_bus.cpp.o
+.PHONY : tests/test_common_data_bus.cpp.o
+
+tests/test_common_data_bus.i: tests/test_common_data_bus.cpp.i
+.PHONY : tests/test_common_data_bus.i
+
+# target to preprocess a source file
+tests/test_common_data_bus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_common_data_bus.cpp.i
+.PHONY : tests/test_common_data_bus.cpp.i
+
+tests/test_common_data_bus.s: tests/test_common_data_bus.cpp.s
+.PHONY : tests/test_common_data_bus.s
+
+# target to generate assembly for a file
+tests/test_common_data_bus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_common_data_bus.cpp.s
+.PHONY : tests/test_common_data_bus.cpp.s
+
+tests/test_instruction.o: tests/test_instruction.cpp.o
+.PHONY : tests/test_instruction.o
+
+# target to build an object file
+tests/test_instruction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_instruction.cpp.o
+.PHONY : tests/test_instruction.cpp.o
+
+tests/test_instruction.i: tests/test_instruction.cpp.i
+.PHONY : tests/test_instruction.i
+
+# target to preprocess a source file
+tests/test_instruction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_instruction.cpp.i
+.PHONY : tests/test_instruction.cpp.i
+
+tests/test_instruction.s: tests/test_instruction.cpp.s
+.PHONY : tests/test_instruction.s
+
+# target to generate assembly for a file
+tests/test_instruction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_instruction.cpp.s
+.PHONY : tests/test_instruction.cpp.s
+
+tests/test_register_file.o: tests/test_register_file.cpp.o
+.PHONY : tests/test_register_file.o
+
+# target to build an object file
+tests/test_register_file.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_register_file.cpp.o
+.PHONY : tests/test_register_file.cpp.o
+
+tests/test_register_file.i: tests/test_register_file.cpp.i
+.PHONY : tests/test_register_file.i
+
+# target to preprocess a source file
+tests/test_register_file.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_register_file.cpp.i
+.PHONY : tests/test_register_file.cpp.i
+
+tests/test_register_file.s: tests/test_register_file.cpp.s
+.PHONY : tests/test_register_file.s
+
+# target to generate assembly for a file
+tests/test_register_file.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_register_file.cpp.s
+.PHONY : tests/test_register_file.cpp.s
+
+tests/test_reorder_buffer.o: tests/test_reorder_buffer.cpp.o
+.PHONY : tests/test_reorder_buffer.o
+
+# target to build an object file
+tests/test_reorder_buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_reorder_buffer.cpp.o
+.PHONY : tests/test_reorder_buffer.cpp.o
+
+tests/test_reorder_buffer.i: tests/test_reorder_buffer.cpp.i
+.PHONY : tests/test_reorder_buffer.i
+
+# target to preprocess a source file
+tests/test_reorder_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_reorder_buffer.cpp.i
+.PHONY : tests/test_reorder_buffer.cpp.i
+
+tests/test_reorder_buffer.s: tests/test_reorder_buffer.cpp.s
+.PHONY : tests/test_reorder_buffer.s
+
+# target to generate assembly for a file
+tests/test_reorder_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_reorder_buffer.cpp.s
+.PHONY : tests/test_reorder_buffer.cpp.s
+
+tests/test_reservation_station.o: tests/test_reservation_station.cpp.o
+.PHONY : tests/test_reservation_station.o
+
+# target to build an object file
+tests/test_reservation_station.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_reservation_station.cpp.o
+.PHONY : tests/test_reservation_station.cpp.o
+
+tests/test_reservation_station.i: tests/test_reservation_station.cpp.i
+.PHONY : tests/test_reservation_station.i
+
+# target to preprocess a source file
+tests/test_reservation_station.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_reservation_station.cpp.i
+.PHONY : tests/test_reservation_station.cpp.i
+
+tests/test_reservation_station.s: tests/test_reservation_station.cpp.s
+.PHONY : tests/test_reservation_station.s
+
+# target to generate assembly for a file
+tests/test_reservation_station.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_reservation_station.cpp.s
+.PHONY : tests/test_reservation_station.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,22 +841,81 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... TomasuloSim_autogen"
 	@echo "... TomasuloSim_autogen_timestamp_deps"
+	@echo "... gmock_autogen"
+	@echo "... gmock_autogen_timestamp_deps"
+	@echo "... gmock_main_autogen"
+	@echo "... gmock_main_autogen_timestamp_deps"
+	@echo "... gtest_autogen"
+	@echo "... gtest_autogen_timestamp_deps"
+	@echo "... gtest_main_autogen"
+	@echo "... gtest_main_autogen_timestamp_deps"
+	@echo "... run_unit_tests_autogen"
+	@echo "... run_unit_tests_autogen_timestamp_deps"
 	@echo "... TomasuloSim"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... run_unit_tests"
 	@echo "... TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.o"
 	@echo "... TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.i"
 	@echo "... TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.s"
 	@echo "... TomasuloSim_autogen/mocs_compilation.o"
 	@echo "... TomasuloSim_autogen/mocs_compilation.i"
 	@echo "... TomasuloSim_autogen/mocs_compilation.s"
+	@echo "... run_unit_tests_autogen/mocs_compilation.o"
+	@echo "... run_unit_tests_autogen/mocs_compilation.i"
+	@echo "... run_unit_tests_autogen/mocs_compilation.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/ui/mainwindow.o"
 	@echo "... src/ui/mainwindow.i"
 	@echo "... src/ui/mainwindow.s"
+	@echo "... src/ui/simulator/common_data_bus.o"
+	@echo "... src/ui/simulator/common_data_bus.i"
+	@echo "... src/ui/simulator/common_data_bus.s"
+	@echo "... src/ui/simulator/instruction.o"
+	@echo "... src/ui/simulator/instruction.i"
+	@echo "... src/ui/simulator/instruction.s"
+	@echo "... src/ui/simulator/register_file.o"
+	@echo "... src/ui/simulator/register_file.i"
+	@echo "... src/ui/simulator/register_file.s"
+	@echo "... src/ui/simulator/reorder_buffer.o"
+	@echo "... src/ui/simulator/reorder_buffer.i"
+	@echo "... src/ui/simulator/reorder_buffer.s"
+	@echo "... src/ui/simulator/reservation_station.o"
+	@echo "... src/ui/simulator/reservation_station.i"
+	@echo "... src/ui/simulator/reservation_station.s"
+	@echo "... src/ui/simulator/simulator_utils.o"
+	@echo "... src/ui/simulator/simulator_utils.i"
+	@echo "... src/ui/simulator/simulator_utils.s"
+	@echo "... src/ui/simulator/tomasulo_core.o"
+	@echo "... src/ui/simulator/tomasulo_core.i"
+	@echo "... src/ui/simulator/tomasulo_core.s"
+	@echo "... tests/test_common_data_bus.o"
+	@echo "... tests/test_common_data_bus.i"
+	@echo "... tests/test_common_data_bus.s"
+	@echo "... tests/test_instruction.o"
+	@echo "... tests/test_instruction.i"
+	@echo "... tests/test_instruction.s"
+	@echo "... tests/test_register_file.o"
+	@echo "... tests/test_register_file.i"
+	@echo "... tests/test_register_file.s"
+	@echo "... tests/test_reorder_buffer.o"
+	@echo "... tests/test_reorder_buffer.i"
+	@echo "... tests/test_reorder_buffer.s"
+	@echo "... tests/test_reservation_station.o"
+	@echo "... tests/test_reservation_station.i"
+	@echo "... tests/test_reservation_station.s"
 .PHONY : help
 
 
