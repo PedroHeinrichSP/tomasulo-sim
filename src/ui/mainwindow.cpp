@@ -23,7 +23,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnReset, &QPushButton::clicked, this, &MainWindow::onResetClicked);
 
     connect(ui->actionAbrir, &QAction::triggered, this, &MainWindow::onActionAbrirTriggered);
-    connect(ui->actionPreferencias, &QAction::triggered, this, &MainWindow::onActionPreferenciasTriggered);
     connect(ui->actionSair, &QAction::triggered, this, &MainWindow::onActionSairTriggered);
     connect(ui->actionSobre, &QAction::triggered, this, &MainWindow::onActionSobreTriggered);
 
@@ -66,10 +65,6 @@ void MainWindow::loadStyleSheet(const QString &path) {
 
 void MainWindow::onActionAbrirTriggered() {
     QFileDialog::getOpenFileName(this, "Abrir programa", QString(), "Assembly (*.asm *.txt)");
-}
-
-void MainWindow::onActionPreferenciasTriggered() {
-    ui->tabWidget->setCurrentWidget(ui->tabSettings);
 }
 
 void MainWindow::onActionSairTriggered() {
