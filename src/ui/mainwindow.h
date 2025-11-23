@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QTableWidgetItem>
+#include "TomasuloCore.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
