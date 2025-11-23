@@ -682,6 +682,9 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/share/cmake/Modules/Platform/Linux.cmake \
   /usr/share/cmake/Modules/Platform/UnixPaths.cmake
 
+CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp.o: TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp \
+  /usr/include/stdc-predef.h
+
 CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o: TomasuloSim_autogen/mocs_compilation.cpp \
   /home/Heinrich/tomasulo-sim/src/ui/mainwindow.h \
   /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h \
@@ -2283,6 +2286,7 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
   /usr/include/qt6/QtGui/qkeysequence.h \
   /usr/include/qt6/QtGui/qpaintdevice.h \
   /usr/include/qt6/QtGui/qpainter.h \
+  /usr/include/qt6/QtGui/qpainterpath.h \
   /usr/include/qt6/QtGui/qpalette.h \
   /usr/include/qt6/QtGui/qpen.h \
   /usr/include/qt6/QtGui/qpicture.h \
@@ -2314,6 +2318,7 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
   /usr/include/qt6/QtWidgets/QFileDialog \
   /usr/include/qt6/QtWidgets/QFormLayout \
   /usr/include/qt6/QtWidgets/QGraphicsScene \
+  /usr/include/qt6/QtWidgets/QGraphicsTextItem \
   /usr/include/qt6/QtWidgets/QGraphicsView \
   /usr/include/qt6/QtWidgets/QGroupBox \
   /usr/include/qt6/QtWidgets/QHBoxLayout \
@@ -2347,6 +2352,7 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
   /usr/include/qt6/QtWidgets/qfiledialog.h \
   /usr/include/qt6/QtWidgets/qformlayout.h \
   /usr/include/qt6/QtWidgets/qframe.h \
+  /usr/include/qt6/QtWidgets/qgraphicsitem.h \
   /usr/include/qt6/QtWidgets/qgraphicsscene.h \
   /usr/include/qt6/QtWidgets/qgraphicsview.h \
   /usr/include/qt6/QtWidgets/qgridlayout.h \
@@ -2399,6 +2405,1734 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
   /usr/lib64/gcc/x86_64-suse-linux/15/include/stdint.h \
   /usr/lib64/gcc/x86_64-suse-linux/15/include/syslimits.h
 
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/common_data_bus.cpp.o: /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm/errno.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/vector \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/types.h \
+  /usr/include/wchar.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stdarg.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stddef.h
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/instruction.cpp.o: /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/algorithm \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/algorithmfwd.h \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocated_ptr.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_ios.h \
+  /usr/include/c++/15/bits/basic_ios.tcc \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/deque.tcc \
+  /usr/include/c++/15/bits/erase_if.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/ios_base.h \
+  /usr/include/c++/15/bits/istream.tcc \
+  /usr/include/c++/15/bits/locale_classes.h \
+  /usr/include/c++/15/bits/locale_classes.tcc \
+  /usr/include/c++/15/bits/locale_conv.h \
+  /usr/include/c++/15/bits/locale_facets.h \
+  /usr/include/c++/15/bits/locale_facets.tcc \
+  /usr/include/c++/15/bits/locale_facets_nonio.h \
+  /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/nested_exception.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/node_handle.h \
+  /usr/include/c++/15/bits/ostream.h \
+  /usr/include/c++/15/bits/ostream.tcc \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/quoted_string.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/regex.h \
+  /usr/include/c++/15/bits/regex.tcc \
+  /usr/include/c++/15/bits/regex_automaton.h \
+  /usr/include/c++/15/bits/regex_automaton.tcc \
+  /usr/include/c++/15/bits/regex_compiler.h \
+  /usr/include/c++/15/bits/regex_compiler.tcc \
+  /usr/include/c++/15/bits/regex_constants.h \
+  /usr/include/c++/15/bits/regex_error.h \
+  /usr/include/c++/15/bits/regex_executor.h \
+  /usr/include/c++/15/bits/regex_executor.tcc \
+  /usr/include/c++/15/bits/regex_scanner.h \
+  /usr/include/c++/15/bits/regex_scanner.tcc \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/shared_ptr.h \
+  /usr/include/c++/15/bits/shared_ptr_base.h \
+  /usr/include/c++/15/bits/sstream.tcc \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_function.h \
+  /usr/include/c++/15/bits/stl_algo.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_deque.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_heap.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_stack.h \
+  /usr/include/c++/15/bits/stl_tempbuf.h \
+  /usr/include/c++/15/bits/stl_tree.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/streambuf.tcc \
+  /usr/include/c++/15/bits/streambuf_iterator.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/uniform_int_dist.h \
+  /usr/include/c++/15/bits/unique_ptr.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/bitset \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/cwctype \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/deque \
+  /usr/include/c++/15/exception \
+  /usr/include/c++/15/ext/aligned_buffer.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
+  /usr/include/c++/15/ext/concurrence.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iomanip \
+  /usr/include/c++/15/ios \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/istream \
+  /usr/include/c++/15/locale \
+  /usr/include/c++/15/map \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/ostream \
+  /usr/include/c++/15/pstl/execution_defs.h \
+  /usr/include/c++/15/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/regex \
+  /usr/include/c++/15/sstream \
+  /usr/include/c++/15/stack \
+  /usr/include/c++/15/stdexcept \
+  /usr/include/c++/15/streambuf \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/system_error \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
+  /usr/include/c++/15/x86_64-suse-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/time_members.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stdarg.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stddef.h
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/register_file.cpp.o: /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_ios.h \
+  /usr/include/c++/15/bits/basic_ios.tcc \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/enable_special_members.h \
+  /usr/include/c++/15/bits/erase_if.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/hashtable.h \
+  /usr/include/c++/15/bits/hashtable_policy.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/ios_base.h \
+  /usr/include/c++/15/bits/istream.tcc \
+  /usr/include/c++/15/bits/locale_classes.h \
+  /usr/include/c++/15/bits/locale_classes.tcc \
+  /usr/include/c++/15/bits/locale_conv.h \
+  /usr/include/c++/15/bits/locale_facets.h \
+  /usr/include/c++/15/bits/locale_facets.tcc \
+  /usr/include/c++/15/bits/locale_facets_nonio.h \
+  /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/nested_exception.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/node_handle.h \
+  /usr/include/c++/15/bits/ostream.h \
+  /usr/include/c++/15/bits/ostream.tcc \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/quoted_string.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/sstream.tcc \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_tree.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/streambuf.tcc \
+  /usr/include/c++/15/bits/streambuf_iterator.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/unordered_map.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/cwctype \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/exception \
+  /usr/include/c++/15/ext/aligned_buffer.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iomanip \
+  /usr/include/c++/15/ios \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/istream \
+  /usr/include/c++/15/locale \
+  /usr/include/c++/15/map \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/ostream \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/sstream \
+  /usr/include/c++/15/stdexcept \
+  /usr/include/c++/15/streambuf \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/system_error \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/unordered_map \
+  /usr/include/c++/15/vector \
+  /usr/include/c++/15/x86_64-suse-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/time_members.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stdarg.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stddef.h
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/reorder_buffer.cpp.o: /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_ios.h \
+  /usr/include/c++/15/bits/basic_ios.tcc \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/erase_if.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/ios_base.h \
+  /usr/include/c++/15/bits/istream.tcc \
+  /usr/include/c++/15/bits/locale_classes.h \
+  /usr/include/c++/15/bits/locale_classes.tcc \
+  /usr/include/c++/15/bits/locale_conv.h \
+  /usr/include/c++/15/bits/locale_facets.h \
+  /usr/include/c++/15/bits/locale_facets.tcc \
+  /usr/include/c++/15/bits/locale_facets_nonio.h \
+  /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/nested_exception.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/node_handle.h \
+  /usr/include/c++/15/bits/ostream.h \
+  /usr/include/c++/15/bits/ostream.tcc \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/quoted_string.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/sstream.tcc \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_tree.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/streambuf.tcc \
+  /usr/include/c++/15/bits/streambuf_iterator.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/cwctype \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/exception \
+  /usr/include/c++/15/ext/aligned_buffer.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iomanip \
+  /usr/include/c++/15/ios \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/istream \
+  /usr/include/c++/15/locale \
+  /usr/include/c++/15/map \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/ostream \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/sstream \
+  /usr/include/c++/15/stdexcept \
+  /usr/include/c++/15/streambuf \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/system_error \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
+  /usr/include/c++/15/x86_64-suse-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/time_members.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stdarg.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stddef.h
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/reservation_station.cpp.o: /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocated_ptr.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_ios.h \
+  /usr/include/c++/15/bits/basic_ios.tcc \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/enable_special_members.h \
+  /usr/include/c++/15/bits/erase_if.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/hashtable.h \
+  /usr/include/c++/15/bits/hashtable_policy.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/ios_base.h \
+  /usr/include/c++/15/bits/istream.tcc \
+  /usr/include/c++/15/bits/list.tcc \
+  /usr/include/c++/15/bits/locale_classes.h \
+  /usr/include/c++/15/bits/locale_classes.tcc \
+  /usr/include/c++/15/bits/locale_conv.h \
+  /usr/include/c++/15/bits/locale_facets.h \
+  /usr/include/c++/15/bits/locale_facets.tcc \
+  /usr/include/c++/15/bits/locale_facets_nonio.h \
+  /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/nested_exception.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/node_handle.h \
+  /usr/include/c++/15/bits/ostream.h \
+  /usr/include/c++/15/bits/ostream.tcc \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/quoted_string.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/sstream.tcc \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_list.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_tree.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/streambuf.tcc \
+  /usr/include/c++/15/bits/streambuf_iterator.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/unordered_map.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/cwctype \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/exception \
+  /usr/include/c++/15/ext/aligned_buffer.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iomanip \
+  /usr/include/c++/15/ios \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/istream \
+  /usr/include/c++/15/list \
+  /usr/include/c++/15/locale \
+  /usr/include/c++/15/map \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/ostream \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/sstream \
+  /usr/include/c++/15/stdexcept \
+  /usr/include/c++/15/streambuf \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/system_error \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/unordered_map \
+  /usr/include/c++/15/vector \
+  /usr/include/c++/15/x86_64-suse-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/time_members.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stdarg.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stddef.h
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/simulator_utils.cpp.o: /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.cpp \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_ios.h \
+  /usr/include/c++/15/bits/basic_ios.tcc \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/erase_if.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/ios_base.h \
+  /usr/include/c++/15/bits/istream.tcc \
+  /usr/include/c++/15/bits/locale_classes.h \
+  /usr/include/c++/15/bits/locale_classes.tcc \
+  /usr/include/c++/15/bits/locale_conv.h \
+  /usr/include/c++/15/bits/locale_facets.h \
+  /usr/include/c++/15/bits/locale_facets.tcc \
+  /usr/include/c++/15/bits/locale_facets_nonio.h \
+  /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/nested_exception.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/node_handle.h \
+  /usr/include/c++/15/bits/ostream.h \
+  /usr/include/c++/15/bits/ostream.tcc \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/quoted_string.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/sstream.tcc \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_tree.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/streambuf.tcc \
+  /usr/include/c++/15/bits/streambuf_iterator.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/cwctype \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/exception \
+  /usr/include/c++/15/ext/aligned_buffer.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iomanip \
+  /usr/include/c++/15/ios \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/istream \
+  /usr/include/c++/15/locale \
+  /usr/include/c++/15/map \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/ostream \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/sstream \
+  /usr/include/c++/15/stdexcept \
+  /usr/include/c++/15/streambuf \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/system_error \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
+  /usr/include/c++/15/x86_64-suse-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/time_members.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stdarg.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stddef.h
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/tomasulo_core.cpp.o: /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.cpp \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h \
+  /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
+  /usr/include/asm/errno.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocated_ptr.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_ios.h \
+  /usr/include/c++/15/bits/basic_ios.tcc \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/deque.tcc \
+  /usr/include/c++/15/bits/enable_special_members.h \
+  /usr/include/c++/15/bits/erase_if.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/fstream.tcc \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/hashtable.h \
+  /usr/include/c++/15/bits/hashtable_policy.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/ios_base.h \
+  /usr/include/c++/15/bits/istream.tcc \
+  /usr/include/c++/15/bits/list.tcc \
+  /usr/include/c++/15/bits/locale_classes.h \
+  /usr/include/c++/15/bits/locale_classes.tcc \
+  /usr/include/c++/15/bits/locale_conv.h \
+  /usr/include/c++/15/bits/locale_facets.h \
+  /usr/include/c++/15/bits/locale_facets.tcc \
+  /usr/include/c++/15/bits/locale_facets_nonio.h \
+  /usr/include/c++/15/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/nested_exception.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/node_handle.h \
+  /usr/include/c++/15/bits/ostream.h \
+  /usr/include/c++/15/bits/ostream.tcc \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/quoted_string.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/sstream.tcc \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_deque.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_heap.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_list.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_queue.h \
+  /usr/include/c++/15/bits/stl_tree.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/streambuf.tcc \
+  /usr/include/c++/15/bits/streambuf_iterator.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/unordered_map.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/cwctype \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/deque \
+  /usr/include/c++/15/exception \
+  /usr/include/c++/15/ext/aligned_buffer.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/fstream \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iomanip \
+  /usr/include/c++/15/ios \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/iostream \
+  /usr/include/c++/15/istream \
+  /usr/include/c++/15/list \
+  /usr/include/c++/15/locale \
+  /usr/include/c++/15/map \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/ostream \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/queue \
+  /usr/include/c++/15/sstream \
+  /usr/include/c++/15/stdexcept \
+  /usr/include/c++/15/streambuf \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/system_error \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/unordered_map \
+  /usr/include/c++/15/vector \
+  /usr/include/c++/15/x86_64-suse-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/basic_file.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++allocator.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++io.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/time_members.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stdarg.h \
+  /usr/lib64/gcc/x86_64-suse-linux/15/include/stddef.h
+
+TomasuloSim: /lib64/ld-linux-x86-64.so.2 \
+  /lib64/libc.so.6 \
+  /lib64/libm.so.6 \
+  /lib64/libmvec.so.1 \
+  /usr/lib64/crt1.o \
+  /usr/lib64/crti.o \
+  /usr/lib64/crtn.o \
+  /usr/lib64/libc.so \
+  /usr/lib64/libm.so \
+  /usr/lib64/gcc/x86_64-suse-linux/15/crtbegin.o \
+  /usr/lib64/gcc/x86_64-suse-linux/15/crtend.o \
+  /usr/lib64/gcc/x86_64-suse-linux/15/libgcc.a \
+  /usr/lib64/gcc/x86_64-suse-linux/15/libgcc_s.so \
+  /usr/lib64/gcc/x86_64-suse-linux/15/libgcc_s.so.1 \
+  /usr/lib64/gcc/x86_64-suse-linux/15/libstdc++.so \
+  /usr/lib64/libEGL.so.1 \
+  /usr/lib64/libGLX.so \
+  /usr/lib64/libGLdispatch.so.0 \
+  /usr/lib64/libOpenGL.so \
+  /usr/lib64/libQt6Core.so.6.10.0 \
+  /usr/lib64/libQt6DBus.so.6 \
+  /usr/lib64/libQt6Gui.so.6.10.0 \
+  /usr/lib64/libQt6Widgets.so.6.10.0 \
+  /usr/lib64/libX11.so.6 \
+  /usr/lib64/libXau.so.6 \
+  /usr/lib64/libb2.so.1 \
+  /usr/lib64/libbrotlicommon.so.1 \
+  /usr/lib64/libbrotlidec.so.1 \
+  /usr/lib64/libbz2.so.1 \
+  /usr/lib64/libc_nonshared.a \
+  /usr/lib64/libcap.so.2 \
+  /usr/lib64/libdbus-1.so.3 \
+  /usr/lib64/libdouble-conversion.so.3 \
+  /usr/lib64/libexpat.so.1 \
+  /usr/lib64/libfontconfig.so.1 \
+  /usr/lib64/libfreetype.so.6 \
+  /usr/lib64/libglib-2.0.so.0 \
+  /usr/lib64/libgomp.so.1 \
+  /usr/lib64/libgraphite2.so.3 \
+  /usr/lib64/libharfbuzz.so.0 \
+  /usr/lib64/libicudata.so.77 \
+  /usr/lib64/libicui18n.so.77 \
+  /usr/lib64/libicuuc.so.77 \
+  /usr/lib64/libmd4c.so.0 \
+  /usr/lib64/libpcre2-16.so.0 \
+  /usr/lib64/libpcre2-8.so.0 \
+  /usr/lib64/libpng16.so.16 \
+  /usr/lib64/libsystemd.so.0 \
+  /usr/lib64/libxcb.so.1 \
+  /usr/lib64/libxkbcommon.so.0 \
+  /usr/lib64/libz.so.1 \
+  /usr/lib64/libzstd.so.1 \
+  CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp.o \
+  CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/main.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/simulator/common_data_bus.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/simulator/instruction.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/simulator/register_file.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/simulator/reorder_buffer.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/simulator/reservation_station.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/simulator/simulator_utils.cpp.o \
+  CMakeFiles/TomasuloSim.dir/src/ui/simulator/tomasulo_core.cpp.o
+
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/register_file.cpp.o:
+
+CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o:
+
+/usr/lib64/libzstd.so.1:
+
+/usr/lib64/libmd4c.so.0:
+
+/usr/lib64/libicui18n.so.77:
+
+/usr/lib64/libgraphite2.so.3:
+
+/usr/lib64/libglib-2.0.so.0:
+
+/usr/lib64/libexpat.so.1:
+
+/usr/lib64/libbz2.so.1:
+
+/usr/lib64/libbrotlidec.so.1:
+
+/usr/lib64/libX11.so.6:
+
+/usr/lib64/libQt6Gui.so.6.10.0:
+
+/usr/lib64/libQt6DBus.so.6:
+
+/usr/lib64/libOpenGL.so:
+
+CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp.o:
+
+/usr/lib64/libGLdispatch.so.0:
+
+/usr/lib64/libEGL.so.1:
+
+/usr/lib64/gcc/x86_64-suse-linux/15/libgcc.a:
+
+/usr/lib64/libm.so:
+
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/instruction.cpp.o:
+
+/usr/lib64/crtn.o:
+
+/usr/include/c++/15/x86_64-suse-linux/bits/c++io.h:
+
+/usr/include/c++/15/x86_64-suse-linux/bits/basic_file.h:
+
+/usr/include/c++/15/iostream:
+
+/usr/include/c++/15/fstream:
+
+/usr/include/c++/15/bits/fstream.tcc:
+
+/usr/include/c++/15/stack:
+
+/usr/include/c++/15/bits/stl_stack.h:
+
+/usr/include/c++/15/bits/regex_scanner.h:
+
+/usr/include/c++/15/bits/regex_error.h:
+
+/usr/include/c++/15/bits/regex_constants.h:
+
+/usr/include/c++/15/bits/regex.h:
 
 /usr/include/qt6/QtWidgets/qtextedit.h:
 
@@ -2420,7 +4154,11 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
 
 /usr/include/qt6/QtWidgets/qgridlayout.h:
 
+/usr/lib64/libdbus-1.so.3:
+
 /usr/include/qt6/QtWidgets/qgraphicsview.h:
+
+/usr/include/qt6/QtWidgets/qgraphicsitem.h:
 
 /usr/include/qt6/QtWidgets/qformlayout.h:
 
@@ -2429,6 +4167,8 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
 /usr/include/qt6/QtWidgets/qdialogbuttonbox.h:
 
 /usr/include/qt6/QtWidgets/qboxlayout.h:
+
+/usr/include/c++/15/bits/regex_executor.tcc:
 
 /usr/include/qt6/QtWidgets/QTabWidget:
 
@@ -2442,7 +4182,11 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
 
 /usr/include/qt6/QtWidgets/QLayout:
 
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/common_data_bus.cpp.o:
+
 /usr/include/qt6/QtWidgets/QGroupBox:
+
+/usr/include/qt6/QtWidgets/QGraphicsTextItem:
 
 /usr/include/qt6/QtWidgets/QFileDialog:
 
@@ -2480,7 +4224,11 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
 
 /usr/include/qt6/QtCore/qdatetime.h:
 
+/usr/lib64/libpng16.so.16:
+
 /usr/include/qt6/QtCore/QVariant:
+
+/usr/include/c++/15/bits/regex_compiler.h:
 
 /usr/include/qt6/QtCore/QSizeF:
 
@@ -2501,6 +4249,8 @@ CMakeFiles/TomasuloSim.dir/src/ui/mainwindow.cpp.o: /home/Heinrich/tomasulo-sim/
 /usr/include/c++/15/bits/fs_fwd.h:
 
 TomasuloSim_autogen/include/ui_mainwindow.h:
+
+/usr/lib64/libdouble-conversion.so.3:
 
 /usr/include/qt6/QtWidgets/QApplication:
 
@@ -2554,6 +4304,8 @@ TomasuloSim_autogen/YPKJ5OE7LN/moc_mainwindow.cpp:
 
 TomasuloSim_autogen/mocs_compilation.cpp:
 
+TomasuloSim_autogen/YPKJ5OE7LN/qrc_resources.cpp:
+
 /usr/share/cmake/Modules/Platform/Linux.cmake:
 
 /usr/include/qt6/QtWidgets/QGraphicsView:
@@ -2567,6 +4319,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake:
 
 /usr/share/cmake/Modules/GNUInstallDirs.cmake:
+
+/usr/include/c++/15/bitset:
 
 /usr/share/cmake/Modules/FindVulkan.cmake:
 
@@ -2622,6 +4376,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/lib64/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake:
 
+/usr/lib64/libpcre2-8.so.0:
+
 /usr/lib64/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake:
 
 /usr/lib64/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:
@@ -2652,6 +4408,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/lib64/cmake/Qt6Gui/Qt6GuiConfig.cmake:
 
+/usr/lib64/libxkbcommon.so.0:
+
 /usr/lib64/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
 
 /usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake:
@@ -2669,6 +4427,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 /usr/lib64/cmake/Qt6DBus/Qt6DBusTargets.cmake:
 
 /usr/lib64/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
+
+/usr/lib64/libicudata.so.77:
 
 /usr/lib64/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
 
@@ -2736,6 +4496,10 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/lib64/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
 
+/usr/lib64/libxcb.so.1:
+
+/usr/lib64/libb2.so.1:
+
 /usr/lib64/cmake/Qt6/QtPublicExternalProjectHelpers.cmake:
 
 /usr/lib64/cmake/Qt6/QtPublicDependencyHelpers.cmake:
@@ -2743,6 +4507,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 /usr/include/c++/15/bits/exception.h:
 
 /usr/include/strings.h:
+
+/usr/lib64/libz.so.1:
 
 /usr/lib64/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
 
@@ -2766,6 +4532,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/15/limits:
 
+/usr/lib64/libc.so:
+
 /usr/include/qt6/QtCore/qmalloc.h:
 
 /usr/include/qt6/QtGui/qrgba64.h:
@@ -2782,6 +4550,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/qt6/QtWidgets/qabstractscrollarea.h:
 
+/lib64/libmvec.so.1:
+
 /usr/include/c++/15/ext/string_conversions.h:
 
 /usr/include/qt6/QtGui/qinputdevice.h:
@@ -2793,6 +4563,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 /usr/include/qt6/QtCore/qshareddata.h:
 
 /usr/include/c++/15/ext/alloc_traits.h:
+
+/usr/include/c++/15/bits/regex_executor.h:
 
 /usr/include/qt6/QtCore/qdarwinhelpers.h:
 
@@ -2806,7 +4578,13 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/qt6/QtCore/qtextstream.h:
 
+/usr/lib64/libpcre2-16.so.0:
+
+/usr/include/c++/15/bits/regex_compiler.tcc:
+
 /usr/include/c++/15/ctime:
+
+/usr/lib64/gcc/x86_64-suse-linux/15/libstdc++.so:
 
 /usr/include/bits/fp-logb.h:
 
@@ -2870,6 +4648,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/15/bits/shared_ptr_base.h:
 
+/lib64/libc.so.6:
+
 /usr/include/c++/15/bits/stl_uninitialized.h:
 
 /usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:
@@ -2877,6 +4657,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 /usr/include/c++/15/bits/stl_list.h:
 
 /usr/include/c++/15/bits/stl_iterator_base_types.h:
+
+/usr/lib64/libc_nonshared.a:
 
 /usr/include/c++/15/bits/stl_heap.h:
 
@@ -2894,13 +4676,19 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/qt6/QtWidgets/qgraphicsscene.h:
 
+/usr/include/c++/15/bits/regex_scanner.tcc:
+
 /usr/include/qt6/QtGui/qaction.h:
 
 /usr/include/c++/15/bits/stl_deque.h:
 
+/usr/lib64/libsystemd.so.0:
+
 /usr/include/bits/types/struct_tm.h:
 
 /usr/include/c++/15/bits/ptr_traits.h:
+
+/usr/lib64/gcc/x86_64-suse-linux/15/crtbegin.o:
 
 /usr/include/qt6/QtCore/qeventloop.h:
 
@@ -2956,11 +4744,15 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/qt6/QtWidgets/QMainWindow:
 
+/usr/lib64/gcc/x86_64-suse-linux/15/libgcc_s.so:
+
 /usr/include/c++/15/bits/ostream.tcc:
 
 /usr/include/c++/15/pstl/glue_algorithm_defs.h:
 
 /usr/include/qt6/QtCore/qexceptionhandling.h:
+
+/usr/lib64/libfontconfig.so.1:
 
 /usr/include/linux/sched/types.h:
 
@@ -2976,9 +4768,13 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/bits/types/wint_t.h:
 
+/lib64/ld-linux-x86-64.so.2:
+
 /usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
 
 /usr/include/c++/15/bits/istream.tcc:
+
+/usr/lib64/libQt6Widgets.so.6.10.0:
 
 /usr/include/c++/15/bits/exception_ptr.h:
 
@@ -3008,6 +4804,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/asm/posix_types_64.h:
 
+CMakeFiles/TomasuloSim.dir/TomasuloSim_autogen/mocs_compilation.cpp.o:
+
 /usr/include/c++/15/ext/type_traits.h:
 
 /usr/include/c++/15/bits/functional_hash.h:
@@ -3035,6 +4833,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.cpp:
 
 /usr/include/qt6/QtWidgets/qabstractitemdelegate.h:
+
+/usr/lib64/libfreetype.so.6:
 
 /usr/include/bits/pthreadtypes-arch.h:
 
@@ -3066,6 +4866,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h:
 
+/usr/include/c++/15/bits/regex_automaton.tcc:
+
 /usr/include/c++/15/cstdio:
 
 /usr/lib64/cmake/Qt6Core/Qt6CoreDependencies.cmake:
@@ -3073,6 +4875,8 @@ TomasuloSim_autogen/mocs_compilation.cpp:
 /usr/include/bits/atomic_wide_counter.h:
 
 /usr/include/c++/15/cassert:
+
+/usr/lib64/libicuuc.so.77:
 
 /usr/include/qt6/QtCore/qobject_impl.h:
 
@@ -3164,6 +4968,8 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /usr/include/bits/select.h:
 
+/usr/lib64/libGLX.so:
+
 /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.h:
 
 /usr/include/bits/typesizes.h:
@@ -3234,6 +5040,8 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 
 /usr/include/bits/types/mbstate_t.h:
 
+/usr/lib64/libcap.so.2:
+
 /usr/include/c++/15/bits/stl_queue.h:
 
 /usr/include/bits/uio_lim.h:
@@ -3258,6 +5066,8 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 
 /usr/include/asm-generic/errno-base.h:
 
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/tomasulo_core.cpp.o:
+
 /usr/include/c++/15/filesystem:
 
 /usr/include/qt6/QtCore/qshareddata_impl.h:
@@ -3271,6 +5081,8 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 /usr/include/sys/single_threaded.h:
 
 /usr/include/asm-generic/errno.h:
+
+/usr/lib64/gcc/x86_64-suse-linux/15/crtend.o:
 
 /usr/include/c++/15/bits/cxxabi_forced.h:
 
@@ -3322,6 +5134,8 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/QStringList:
 
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/simulator_utils.cpp.o:
+
 /usr/include/c++/15/bits/invoke.h:
 
 /usr/include/qt6/QtCore/qfunctionpointer.h:
@@ -3351,6 +5165,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/bits/types/time_t.h:
 
 /usr/include/bits/thread-shared-types.h:
+
+/usr/lib64/libXau.so.6:
 
 /usr/include/bits/stdlib-float.h:
 
@@ -3390,6 +5206,8 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/q23utility.h:
 
+/usr/lib64/crti.o:
+
 /usr/include/c++/15/bit:
 
 /usr/include/bits/types/__fpos64_t.h:
@@ -3417,6 +5235,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/c++/15/bits/cxxabi_init_exception.h:
 
 /usr/lib64/cmake/Qt6/QtFeatureCommon.cmake:
+
+CMakeFiles/TomasuloSim.dir/src/main.cpp.o:
 
 /usr/include/c++/15/bits/shared_ptr_atomic.h:
 
@@ -3453,6 +5273,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/stdio.h:
 
 /usr/include/qt6/QtCore/q20functional.h:
+
+/usr/lib64/libbrotlicommon.so.1:
 
 /usr/include/c++/15/bits/align.h:
 
@@ -3508,6 +5330,8 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/c++/15/set:
 
+/usr/lib64/libgomp.so.1:
+
 /usr/include/qt6/QtCore/qnamespace.h:
 
 /usr/include/c++/15/bits/atomic_lockfree_defines.h:
@@ -3535,6 +5359,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/c++/15/bits/streambuf_iterator.h:
 
 /usr/include/qt6/QtWidgets/qstyle.h:
+
+/lib64/libm.so.6:
 
 /usr/include/c++/15/bits/basic_ios.tcc:
 
@@ -3569,6 +5395,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/c++/15/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/15/tr1/poly_hermite.tcc:
+
+/usr/include/c++/15/regex:
 
 /usr/include/c++/15/tr1/riemann_zeta.tcc:
 
@@ -3624,6 +5452,8 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/features-time64.h:
 
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/reservation_station.cpp.o:
+
 /usr/include/qt6/QtCore/QVector:
 
 /usr/include/qt6/QtCore/q17memory.h:
@@ -3645,6 +5475,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/share/cmake/Modules/Platform/Linker/GNU.cmake:
 
 /usr/lib64/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
+
+/usr/include/c++/15/bits/regex_automaton.h:
 
 /usr/include/pthread.h:
 
@@ -3697,6 +5529,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/c++/15/bits/version.h:
 
 /usr/include/qt6/QtCore/qbytearraylist.h:
+
+/usr/include/c++/15/bits/regex.tcc:
 
 /usr/include/c++/15/debug/debug.h:
 
@@ -3754,6 +5588,8 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qhash.h:
 
+/usr/lib64/libharfbuzz.so.0:
+
 /usr/include/qt6/QtCore/qiodevicebase.h:
 
 /usr/include/bits/stdint-uintn.h:
@@ -3802,6 +5638,10 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qpair.h:
 
+/usr/lib64/crt1.o:
+
+/usr/include/qt6/QtGui/qpainterpath.h:
+
 /usr/include/qt6/QtCore/qprocessordetection.h:
 
 /usr/include/qt6/QtCore/qscopedpointer.h:
@@ -3839,6 +5679,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/qt6/QtCore/qstringview.h:
 
 /usr/include/qt6/QtCore/qswap.h:
+
+/usr/lib64/libQt6Core.so.6.10.0:
 
 /usr/include/c++/15/bits/nested_exception.h:
 
@@ -3964,6 +5806,8 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtWidgets/qtabbar.h:
 
+CMakeFiles/TomasuloSim.dir/src/ui/simulator/reorder_buffer.cpp.o:
+
 /usr/include/qt6/QtWidgets/qtwidgetsexports.h:
 
 /usr/include/qt6/QtWidgets/qtwidgetsglobal.h:
@@ -3971,6 +5815,8 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake:
 
 /usr/include/sched.h:
+
+/usr/lib64/gcc/x86_64-suse-linux/15/libgcc_s.so.1:
 
 /usr/include/wctype.h:
 

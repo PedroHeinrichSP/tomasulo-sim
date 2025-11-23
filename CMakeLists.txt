@@ -43,12 +43,18 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.txt
-     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/arithmetic.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/fp_ops.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/load_store_sequence.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/branch_example.txt
+    DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 
 add_executable(run_unit_tests
     tests/test_instruction.cpp
+    tests/test_instruction_extra.cpp
     tests/test_register_file.cpp
     tests/test_reorder_buffer.cpp
     tests/test_common_data_bus.cpp

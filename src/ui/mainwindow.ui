@@ -23,6 +23,43 @@
       <item><widget class="QLabel" name="lblCycle"><property name="text"><string>Ciclo: 0</string></property></widget></item>
      </layout>
     </item>
+   <item>
+    <widget class="QWidget" name="metricsContainer">
+     <layout class="QVBoxLayout" name="metricsContainerLayout">
+      <item>
+      <widget class="QLabel" name="lblMetricsTitle">
+       <property name="text"><string>Métricas de desempenho</string></property>
+       <property name="alignment"><set>Qt::AlignHCenter|Qt::AlignTop</set></property>
+       <property name="font"><font><bold>true</bold><pointsize>10</pointsize></font></property>
+      </widget>
+      </item>
+      <item>
+      <widget class="QGroupBox" name="metricsBox">
+       <property name="minimumSize"><size><width>320</width><height>0</height></size></property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="title"><string></string></property>
+       <layout class="QGridLayout">
+        <item row="0" column="0"><widget class="QLabel" name="lblIPC"><property name="text"><string>IPC médio:</string></property></widget></item>
+        <item row="0" column="1"><widget class="QLabel" name="valIPC"><property name="text"><string>0.00</string></property><property name="font"><font><bold>true</bold></font></property></widget></item>
+        <item row="1" column="0"><widget class="QLabel" name="lblCiclos"><property name="text"><string>Ciclos:</string></property></widget></item>
+        <item row="1" column="1"><widget class="QLabel" name="valCiclos"><property name="text"><string>0</string></property><property name="font"><font><bold>true</bold></font></property></widget></item>
+        <item row="2" column="0"><widget class="QLabel" name="lblCommits"><property name="text"><string>Instruções confirmadas:</string></property></widget></item>
+        <item row="2" column="1"><widget class="QLabel" name="valCommits"><property name="text"><string>0</string></property><property name="font"><font><bold>true</bold></font></property></widget></item>
+        <item row="3" column="0"><widget class="QLabel" name="lblBubbles"><property name="text"><string>Ciclos de bolha:</string></property></widget></item>
+        <item row="3" column="1"><widget class="QLabel" name="valBubbles"><property name="text"><string>0</string></property><property name="font"><font><bold>true</bold></font></property></widget></item>
+        <item row="4" column="0"><widget class="QLabel" name="lblStatus"><property name="text"><string>Estado:</string></property></widget></item>
+        <item row="4" column="1"><widget class="QLabel" name="valStatus"><property name="text"><string>Parado</string></property><property name="font"><font><bold>true</bold></font></property></widget></item>
+       </layout>
+      </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
 
     <item>
      <widget class="QSplitter" name="splitter">
@@ -66,21 +103,7 @@
        </widget>
       </widget>
 
-      <widget class="QGroupBox" name="metricsBox">
-       <property name="title"><string>Métricas de desempenho</string></property>
-       <layout class="QFormLayout">
-        <item row="0" column="0"><widget class="QLabel" name="lblIPC"><property name="text"><string>IPC médio:</string></property></widget></item>
-        <item row="0" column="1"><widget class="QLabel" name="valIPC"><property name="text"><string>0.00</string></property></widget></item>
-        <item row="1" column="0"><widget class="QLabel" name="lblCiclos"><property name="text"><string>Ciclos:</string></property></widget></item>
-        <item row="1" column="1"><widget class="QLabel" name="valCiclos"><property name="text"><string>0</string></property></widget></item>
-   <item row="2" column="0"><widget class="QLabel" name="lblCommits"><property name="text"><string>Instruções confirmadas:</string></property></widget></item>
-   <item row="2" column="1"><widget class="QLabel" name="valCommits"><property name="text"><string>0</string></property></widget></item>
-   <item row="3" column="0"><widget class="QLabel" name="lblBubbles"><property name="text"><string>Ciclos de bolha:</string></property></widget></item>
-   <item row="3" column="1"><widget class="QLabel" name="valBubbles"><property name="text"><string>0</string></property></widget></item>
-   <item row="4" column="0"><widget class="QLabel" name="lblStatus"><property name="text"><string>Estado:</string></property></widget></item>
-   <item row="4" column="1"><widget class="QLabel" name="valStatus"><property name="text"><string>Parado</string></property></widget></item>
-       </layout>
-      </widget>
+        
      </widget>
     </item>
    </layout>

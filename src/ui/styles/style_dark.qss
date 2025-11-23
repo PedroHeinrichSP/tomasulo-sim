@@ -57,9 +57,9 @@ QTableWidget {
     selection-background-color: #4FC3F7;
 }
 
-/* Cores por estágio */
-QTableWidget::item[stage="issue"] { background-color: #4FC3F7; }
-QTableWidget::item[stage="execute"] { background-color: #FFD54F; }
-QTableWidget::item[stage="writeback"] { background-color: #81C784; }
-QTableWidget::item[stage="commit"] { background-color: #BA68C8; }
-QTableWidget::item[stage="bubble"] { background-color: #B0BEC5; }
+/* Cores por estágio - ensure text on colored cells contrasts by using a dark text color */
+QTableWidget::item[stage="issue"]    { background-color: #4FC3F7; color: #111111; }
+QTableWidget::item[stage="execute"]  { background-color: #FFD54F; color: #111111; }
+QTableWidget::item[stage="writeback"]{ background-color: #81C784; color: #111111; }
+QTableWidget::item[stage="commit"]   { background-color: #BA68C8; color: #111111; }
+QTableWidget::item[stage="bubble"]   { background-color: #B0BEC5; color: #111111; }

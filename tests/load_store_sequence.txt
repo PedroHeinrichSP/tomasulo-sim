@@ -1,0 +1,6 @@
+SW R1, 0(R0)
+SW R2, 4(R0)
+SW R3, 8(R0)
+LW R4, 0(R0)
+LW R5, 4(R0)
+LW R6, 8(R0)

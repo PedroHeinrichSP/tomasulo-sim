@@ -1,0 +1,8 @@
+ADDI R1, R0, 0      # counter
+ADDI R2, R0, 3      # limit
+LOOP:
+    ADDI R1, R1, 1
+    BEQ R1, R2, END
+    JAL R0, LOOP
+END:
+    SW R1, 0(R0)

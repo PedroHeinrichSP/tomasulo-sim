@@ -786,6 +786,30 @@ tests/test_instruction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_instruction.cpp.s
 .PHONY : tests/test_instruction.cpp.s
 
+tests/test_instruction_extra.o: tests/test_instruction_extra.cpp.o
+.PHONY : tests/test_instruction_extra.o
+
+# target to build an object file
+tests/test_instruction_extra.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_instruction_extra.cpp.o
+.PHONY : tests/test_instruction_extra.cpp.o
+
+tests/test_instruction_extra.i: tests/test_instruction_extra.cpp.i
+.PHONY : tests/test_instruction_extra.i
+
+# target to preprocess a source file
+tests/test_instruction_extra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_instruction_extra.cpp.i
+.PHONY : tests/test_instruction_extra.cpp.i
+
+tests/test_instruction_extra.s: tests/test_instruction_extra.cpp.s
+.PHONY : tests/test_instruction_extra.s
+
+# target to generate assembly for a file
+tests/test_instruction_extra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_instruction_extra.cpp.s
+.PHONY : tests/test_instruction_extra.cpp.s
+
 tests/test_register_file.o: tests/test_register_file.cpp.o
 .PHONY : tests/test_register_file.o
 
@@ -982,6 +1006,9 @@ help:
 	@echo "... tests/test_instruction.o"
 	@echo "... tests/test_instruction.i"
 	@echo "... tests/test_instruction.s"
+	@echo "... tests/test_instruction_extra.o"
+	@echo "... tests/test_instruction_extra.i"
+	@echo "... tests/test_instruction_extra.s"
 	@echo "... tests/test_register_file.o"
 	@echo "... tests/test_register_file.i"
 	@echo "... tests/test_register_file.s"

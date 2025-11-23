@@ -13,8 +13,8 @@
 #include <QtGui/QAction>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -49,6 +49,21 @@ public:
     QPushButton *btnReset;
     QSpacerItem *spacer1;
     QLabel *lblCycle;
+    QWidget *metricsContainer;
+    QVBoxLayout *metricsContainerLayout;
+    QLabel *lblMetricsTitle;
+    QGroupBox *metricsBox;
+    QGridLayout *gridLayout;
+    QLabel *lblIPC;
+    QLabel *valIPC;
+    QLabel *lblCiclos;
+    QLabel *valCiclos;
+    QLabel *lblCommits;
+    QLabel *valCommits;
+    QLabel *lblBubbles;
+    QLabel *valBubbles;
+    QLabel *lblStatus;
+    QLabel *valStatus;
     QSplitter *splitter;
     QTabWidget *tabWidget;
     QWidget *tabPipeline;
@@ -73,18 +88,6 @@ public:
     QRadioButton *radioDark;
     QRadioButton *radioLight;
     QSpacerItem *spacerFuture;
-    QGroupBox *metricsBox;
-    QFormLayout *formLayout;
-    QLabel *lblIPC;
-    QLabel *valIPC;
-    QLabel *lblCiclos;
-    QLabel *valCiclos;
-    QLabel *lblCommits;
-    QLabel *valCommits;
-    QLabel *lblBubbles;
-    QLabel *valBubbles;
-    QLabel *lblStatus;
-    QLabel *valStatus;
     QMenuBar *menubar;
     QMenu *menuArquivo;
     QMenu *menuExibir;
@@ -140,6 +143,94 @@ public:
 
 
         mainLayout->addLayout(controlBar);
+
+        metricsContainer = new QWidget(centralwidget);
+        metricsContainer->setObjectName("metricsContainer");
+        metricsContainerLayout = new QVBoxLayout(metricsContainer);
+        metricsContainerLayout->setObjectName("metricsContainerLayout");
+        metricsContainerLayout->setContentsMargins(0, 0, 0, 0);
+        lblMetricsTitle = new QLabel(metricsContainer);
+        lblMetricsTitle->setObjectName("lblMetricsTitle");
+        lblMetricsTitle->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+        QFont font;
+        font.setPointSize(10);
+        font.setBold(true);
+        lblMetricsTitle->setFont(font);
+
+        metricsContainerLayout->addWidget(lblMetricsTitle);
+
+        metricsBox = new QGroupBox(metricsContainer);
+        metricsBox->setObjectName("metricsBox");
+        metricsBox->setMinimumSize(QSize(320, 0));
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(metricsBox->sizePolicy().hasHeightForWidth());
+        metricsBox->setSizePolicy(sizePolicy);
+        gridLayout = new QGridLayout(metricsBox);
+        gridLayout->setObjectName("gridLayout");
+        lblIPC = new QLabel(metricsBox);
+        lblIPC->setObjectName("lblIPC");
+
+        gridLayout->addWidget(lblIPC, 0, 0, 1, 1);
+
+        valIPC = new QLabel(metricsBox);
+        valIPC->setObjectName("valIPC");
+        QFont font1;
+        font1.setBold(true);
+        valIPC->setFont(font1);
+
+        gridLayout->addWidget(valIPC, 0, 1, 1, 1);
+
+        lblCiclos = new QLabel(metricsBox);
+        lblCiclos->setObjectName("lblCiclos");
+
+        gridLayout->addWidget(lblCiclos, 1, 0, 1, 1);
+
+        valCiclos = new QLabel(metricsBox);
+        valCiclos->setObjectName("valCiclos");
+        valCiclos->setFont(font1);
+
+        gridLayout->addWidget(valCiclos, 1, 1, 1, 1);
+
+        lblCommits = new QLabel(metricsBox);
+        lblCommits->setObjectName("lblCommits");
+
+        gridLayout->addWidget(lblCommits, 2, 0, 1, 1);
+
+        valCommits = new QLabel(metricsBox);
+        valCommits->setObjectName("valCommits");
+        valCommits->setFont(font1);
+
+        gridLayout->addWidget(valCommits, 2, 1, 1, 1);
+
+        lblBubbles = new QLabel(metricsBox);
+        lblBubbles->setObjectName("lblBubbles");
+
+        gridLayout->addWidget(lblBubbles, 3, 0, 1, 1);
+
+        valBubbles = new QLabel(metricsBox);
+        valBubbles->setObjectName("valBubbles");
+        valBubbles->setFont(font1);
+
+        gridLayout->addWidget(valBubbles, 3, 1, 1, 1);
+
+        lblStatus = new QLabel(metricsBox);
+        lblStatus->setObjectName("lblStatus");
+
+        gridLayout->addWidget(lblStatus, 4, 0, 1, 1);
+
+        valStatus = new QLabel(metricsBox);
+        valStatus->setObjectName("valStatus");
+        valStatus->setFont(font1);
+
+        gridLayout->addWidget(valStatus, 4, 1, 1, 1);
+
+
+        metricsContainerLayout->addWidget(metricsBox);
+
+
+        mainLayout->addWidget(metricsContainer);
 
         splitter = new QSplitter(centralwidget);
         splitter->setObjectName("splitter");
@@ -225,61 +316,6 @@ public:
 
         tabWidget->addTab(tabSettings, QString());
         splitter->addWidget(tabWidget);
-        metricsBox = new QGroupBox(splitter);
-        metricsBox->setObjectName("metricsBox");
-        formLayout = new QFormLayout(metricsBox);
-        formLayout->setObjectName("formLayout");
-        lblIPC = new QLabel(metricsBox);
-        lblIPC->setObjectName("lblIPC");
-
-        formLayout->setWidget(0, QFormLayout::ItemRole::LabelRole, lblIPC);
-
-        valIPC = new QLabel(metricsBox);
-        valIPC->setObjectName("valIPC");
-
-        formLayout->setWidget(0, QFormLayout::ItemRole::FieldRole, valIPC);
-
-        lblCiclos = new QLabel(metricsBox);
-        lblCiclos->setObjectName("lblCiclos");
-
-        formLayout->setWidget(1, QFormLayout::ItemRole::LabelRole, lblCiclos);
-
-        valCiclos = new QLabel(metricsBox);
-        valCiclos->setObjectName("valCiclos");
-
-        formLayout->setWidget(1, QFormLayout::ItemRole::FieldRole, valCiclos);
-
-        lblCommits = new QLabel(metricsBox);
-        lblCommits->setObjectName("lblCommits");
-
-        formLayout->setWidget(2, QFormLayout::ItemRole::LabelRole, lblCommits);
-
-        valCommits = new QLabel(metricsBox);
-        valCommits->setObjectName("valCommits");
-
-        formLayout->setWidget(2, QFormLayout::ItemRole::FieldRole, valCommits);
-
-        lblBubbles = new QLabel(metricsBox);
-        lblBubbles->setObjectName("lblBubbles");
-
-        formLayout->setWidget(3, QFormLayout::ItemRole::LabelRole, lblBubbles);
-
-        valBubbles = new QLabel(metricsBox);
-        valBubbles->setObjectName("valBubbles");
-
-        formLayout->setWidget(3, QFormLayout::ItemRole::FieldRole, valBubbles);
-
-        lblStatus = new QLabel(metricsBox);
-        lblStatus->setObjectName("lblStatus");
-
-        formLayout->setWidget(4, QFormLayout::ItemRole::LabelRole, lblStatus);
-
-        valStatus = new QLabel(metricsBox);
-        valStatus->setObjectName("valStatus");
-
-        formLayout->setWidget(4, QFormLayout::ItemRole::FieldRole, valStatus);
-
-        splitter->addWidget(metricsBox);
 
         mainLayout->addWidget(splitter);
 
@@ -317,16 +353,8 @@ public:
         btnStep->setText(QCoreApplication::translate("MainWindow", "Passo", nullptr));
         btnReset->setText(QCoreApplication::translate("MainWindow", "Resetar", nullptr));
         lblCycle->setText(QCoreApplication::translate("MainWindow", "Ciclo: 0", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tabPipeline), QCoreApplication::translate("MainWindow", "Pipeline", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tabRS), QCoreApplication::translate("MainWindow", "Esta\303\247\303\265es de Reserva", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tabROB), QCoreApplication::translate("MainWindow", "Reorder Buffer", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tabRegs), QCoreApplication::translate("MainWindow", "Registradores", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tabLogs), QCoreApplication::translate("MainWindow", "Logs", nullptr));
-        groupTheme->setTitle(QCoreApplication::translate("MainWindow", "Tema", nullptr));
-        radioDark->setText(QCoreApplication::translate("MainWindow", "Escuro", nullptr));
-        radioLight->setText(QCoreApplication::translate("MainWindow", "Claro", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tabSettings), QCoreApplication::translate("MainWindow", "Prefer\303\252ncias", nullptr));
-        metricsBox->setTitle(QCoreApplication::translate("MainWindow", "M\303\251tricas de desempenho", nullptr));
+        lblMetricsTitle->setText(QCoreApplication::translate("MainWindow", "M\303\251tricas de desempenho", nullptr));
+        metricsBox->setTitle(QString());
         lblIPC->setText(QCoreApplication::translate("MainWindow", "IPC m\303\251dio:", nullptr));
         valIPC->setText(QCoreApplication::translate("MainWindow", "0.00", nullptr));
         lblCiclos->setText(QCoreApplication::translate("MainWindow", "Ciclos:", nullptr));
@@ -337,6 +365,15 @@ public:
         valBubbles->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         lblStatus->setText(QCoreApplication::translate("MainWindow", "Estado:", nullptr));
         valStatus->setText(QCoreApplication::translate("MainWindow", "Parado", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabPipeline), QCoreApplication::translate("MainWindow", "Pipeline", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabRS), QCoreApplication::translate("MainWindow", "Esta\303\247\303\265es de Reserva", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabROB), QCoreApplication::translate("MainWindow", "Reorder Buffer", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabRegs), QCoreApplication::translate("MainWindow", "Registradores", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabLogs), QCoreApplication::translate("MainWindow", "Logs", nullptr));
+        groupTheme->setTitle(QCoreApplication::translate("MainWindow", "Tema", nullptr));
+        radioDark->setText(QCoreApplication::translate("MainWindow", "Escuro", nullptr));
+        radioLight->setText(QCoreApplication::translate("MainWindow", "Claro", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tabSettings), QCoreApplication::translate("MainWindow", "Prefer\303\252ncias", nullptr));
         menuArquivo->setTitle(QCoreApplication::translate("MainWindow", "Arquivo", nullptr));
         menuExibir->setTitle(QCoreApplication::translate("MainWindow", "Exibir", nullptr));
         menuAjuda->setTitle(QCoreApplication::translate("MainWindow", "Ajuda", nullptr));
