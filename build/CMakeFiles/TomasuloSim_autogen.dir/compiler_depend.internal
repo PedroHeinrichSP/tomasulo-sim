@@ -11,6 +11,20 @@
  /home/Heinrich/tomasulo-sim/src/ui/mainwindow.h
  /home/Heinrich/tomasulo-sim/src/ui/mainwindow.ui
  /home/Heinrich/tomasulo-sim/src/ui/resources.qrc
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.cpp
+ /home/Heinrich/tomasulo-sim/src/ui/simulator/tomasulo_core.h
  /usr/bin/cmake
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
@@ -277,6 +291,7 @@
  /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/pthread.h
+ /usr/include/qt6/QtCore/QTimer
  /usr/include/qt6/QtCore/q17memory.h
  /usr/include/qt6/QtCore/q20functional.h
  /usr/include/qt6/QtCore/q20iterator.h
@@ -284,6 +299,7 @@
  /usr/include/qt6/QtCore/q20type_traits.h
  /usr/include/qt6/QtCore/q20utility.h
  /usr/include/qt6/QtCore/q23utility.h
+ /usr/include/qt6/QtCore/qabstracteventdispatcher.h
  /usr/include/qt6/QtCore/qabstractitemmodel.h
  /usr/include/qt6/QtCore/qalgorithms.h
  /usr/include/qt6/QtCore/qalloc.h
@@ -295,6 +311,7 @@
  /usr/include/qt6/QtCore/qatomic.h
  /usr/include/qt6/QtCore/qatomic_cxx11.h
  /usr/include/qt6/QtCore/qbasicatomic.h
+ /usr/include/qt6/QtCore/qbasictimer.h
  /usr/include/qt6/QtCore/qbindingstorage.h
  /usr/include/qt6/QtCore/qbytearray.h
  /usr/include/qt6/QtCore/qbytearrayalgorithms.h
@@ -314,8 +331,10 @@
  /usr/include/qt6/QtCore/qcontiguouscache.h
  /usr/include/qt6/QtCore/qdarwinhelpers.h
  /usr/include/qt6/QtCore/qdatastream.h
+ /usr/include/qt6/QtCore/qdeadlinetimer.h
  /usr/include/qt6/QtCore/qdebug.h
  /usr/include/qt6/QtCore/qendian.h
+ /usr/include/qt6/QtCore/qeventloop.h
  /usr/include/qt6/QtCore/qexceptionhandling.h
  /usr/include/qt6/QtCore/qflags.h
  /usr/include/qt6/QtCore/qfloat16.h
@@ -392,6 +411,7 @@
  /usr/include/qt6/QtCore/qtenvironmentvariables.h
  /usr/include/qt6/QtCore/qtextstream.h
  /usr/include/qt6/QtCore/qtformat_impl.h
+ /usr/include/qt6/QtCore/qtimer.h
  /usr/include/qt6/QtCore/qtmetamacros.h
  /usr/include/qt6/QtCore/qtnoop.h
  /usr/include/qt6/QtCore/qtpreprocessorsupport.h
@@ -603,12 +623,16 @@
  /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake
  /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake
  /usr/share/cmake/Modules/Compiler/GNU.cmake
+ /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake
+ /usr/share/cmake/Modules/FetchContent.cmake
+ /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in
  /usr/share/cmake/Modules/FindOpenGL.cmake
  /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake
  /usr/share/cmake/Modules/FindPackageMessage.cmake
  /usr/share/cmake/Modules/FindThreads.cmake
  /usr/share/cmake/Modules/FindVulkan.cmake
  /usr/share/cmake/Modules/GNUInstallDirs.cmake
+ /usr/share/cmake/Modules/GoogleTest.cmake
  /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake
  /usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake
  /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake
