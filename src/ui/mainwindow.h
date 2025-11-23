@@ -12,6 +12,14 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+/**
+ * @brief Interface principal do simulador de Tomasulo.
+ *
+ * Responsável por controlar o timer de execução, coordenar interações do usuário
+ * (botões/menu), preencher as tabelas do pipeline/RS/ROB/registradores e exibir
+ * métricas e logs em tempo real sem alterar o núcleo em `src/ui/simulator`.
+ */
+
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
@@ -20,15 +28,18 @@ public:
     ~MainWindow();
 
 private slots:
+    /** Botões da barra de controle */
     void onRunClicked();
     void onPauseClicked();
     void onStepClicked();
     void onResetClicked();
 
+    /** Ações de menu */
     void onActionAbrirTriggered();
     void onActionSairTriggered();
     void onActionSobreTriggered();
 
+    /** Preferências e laço de simulação */
     void onThemeChanged();
     void performSimulationStep();
 
@@ -42,16 +53,22 @@ private:
     QStringList stationOrder;
     int bubbleCycles = 0;
     bool isRunning = false;
+
+    // === Configuração inicial ===
     void setupTables();
     void applyStageColor(QTableWidgetItem *item, const QString &stage);
     void loadStyleSheet(const QString &path);
     void initializeRegisterNames();
+
+    // === Atualização das visualizações ===
     void refreshUI();
     void updateReservationStationsTable();
     void updateROBTable();
     void updateRegistersTable();
     void updatePipelineScene();
     void updateMetrics();
+
+    // === Utilitários ===
     QString opcodeToString(OpCode op) const;
     QString robStateToString(ROBState state) const;
     bool loadProgramFromFile(const QString &filePath);

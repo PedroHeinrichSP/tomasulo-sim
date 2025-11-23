@@ -15,6 +15,7 @@
 #include <QVector>
 #include <QPair>
 
+// Configura widgets, estilos e conexões para a interface do simulador.
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent),
             ui(new Ui::MainWindow),
@@ -53,6 +54,7 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
+// Define colunas e políticas de cada tabela da interface.
 void MainWindow::setupTables() {
     ui->tableRS->clear();
     ui->tableRS->setColumnCount(9);
@@ -93,6 +95,7 @@ void MainWindow::setupTables() {
     ui->tableRegs->setRowCount(registerNames.size());
 }
 
+// Lista R0..R31 e F0..F31 para preencher a tabela de registradores.
 void MainWindow::initializeRegisterNames() {
     registerNames.clear();
     for (int i = 0; i < 32; ++i) {
@@ -103,6 +106,7 @@ void MainWindow::initializeRegisterNames() {
     }
 }
 
+// Usa um esquema de cores consistente por estágio para facilitar leitura rápida.
 void MainWindow::applyStageColor(QTableWidgetItem *item, const QString &stage) {
     QColor color;
     if (stage == "issue") color = QColor("#4FC3F7");
@@ -113,12 +117,14 @@ void MainWindow::applyStageColor(QTableWidgetItem *item, const QString &stage) {
     item->setBackground(color);
 }
 
+// Carrega e aplica os temas claro/escuro definidos em arquivos .qss.
 void MainWindow::loadStyleSheet(const QString &path) {
     QFile f(path);
     if (f.open(QFile::ReadOnly))
         qApp->setStyleSheet(QString::fromUtf8(f.readAll()));
 }
 
+// Chamada central para sincronizar labels, tabelas e gráficos com o core.
 void MainWindow::refreshUI() {
     ui->lblCycle->setText(tr("Ciclo: %1").arg(core.cycle));
     updateReservationStationsTable();
@@ -128,6 +134,7 @@ void MainWindow::refreshUI() {
     updateMetrics();
 }
 
+// Percorre pools na ordem desejada e preenche cada linha com status da RS.
 void MainWindow::updateReservationStationsTable() {
     int totalEntries = 0;
     for (const auto &name : stationOrder) {
@@ -192,6 +199,7 @@ void MainWindow::updateReservationStationsTable() {
     }
 }
 
+// Reflete cada entrada do ROB (inclusive slots vazios) na tabela lateral.
 void MainWindow::updateROBTable() {
     const int robSize = core.rob.getSize();
     if (ui->tableROB->rowCount() != robSize) {
@@ -217,6 +225,7 @@ void MainWindow::updateROBTable() {
     }
 }
 
+// Mostra valor atual e produtor (ROB) de cada registrador.
 void MainWindow::updateRegistersTable() {
     if (ui->tableRegs->rowCount() != registerNames.size()) {
         ui->tableRegs->setRowCount(registerNames.size());
@@ -242,6 +251,7 @@ void MainWindow::updateRegistersTable() {
     }
 }
 
+// Pequeno diagrama com contadores por estágio para feedback rápido.
 void MainWindow::updatePipelineScene() {
     pipelineScene->clear();
 
@@ -291,6 +301,7 @@ void MainWindow::updatePipelineScene() {
     }
 }
 
+// Calcula IPC e mostra contadores agregados no painel de métricas.
 void MainWindow::updateMetrics() {
     const int cycles = core.cycle;
     const int commits = core.instructionsCommitted;
@@ -302,6 +313,7 @@ void MainWindow::updateMetrics() {
     if (ui->valBubbles) ui->valBubbles->setText(QString::number(bubbleCycles));
 }
 
+// Conversão básica de enum -> string para uso em tabelas/labels.
 QString MainWindow::opcodeToString(OpCode op) const {
     switch (op) {
         case OpCode::ADD: return "ADD";
@@ -326,6 +338,7 @@ QString MainWindow::opcodeToString(OpCode op) const {
     }
 }
 
+// Converte o estado interno do ROB para rótulos exibidos na tabela.
 QString MainWindow::robStateToString(ROBState state) const {
     switch (state) {
         case ROBState::ISSUE: return tr("Issue");
@@ -336,6 +349,7 @@ QString MainWindow::robStateToString(ROBState state) const {
     }
 }
 
+// Tenta abrir arquivo externo, preservando o último programa em caso de falha.
 bool MainWindow::loadProgramFromFile(const QString &filePath) {
     if (filePath.isEmpty()) return false;
 
@@ -364,6 +378,7 @@ bool MainWindow::loadProgramFromFile(const QString &filePath) {
     return true;
 }
 
+// Adiciona linha no painel de logs com timestamp de ciclo.
 void MainWindow::appendLog(const QString &message) {
     const QString line = QStringLiteral("[C%1] %2")
         .arg(core.cycle, 4, 10, QLatin1Char('0'))
@@ -371,6 +386,7 @@ void MainWindow::appendLog(const QString &message) {
     ui->txtLog->appendPlainText(line);
 }
 
+// Interrompe o timer de execução e marca modo parado.
 void MainWindow::stopSimulation() {
     if (simulationTimer->isActive()) {
         simulationTimer->stop();
@@ -378,6 +394,7 @@ void MainWindow::stopSimulation() {
     isRunning = false;
 }
 
+// Limpa métricas locais e (opcionalmente) realimenta o core com o arquivo atual.
 void MainWindow::resetState(bool reloadProgram) {
     stopSimulation();
     bubbleCycles = 0;
@@ -389,12 +406,14 @@ void MainWindow::resetState(bool reloadProgram) {
     refreshUI();
 }
 
+// Atualiza o label "Estado" na caixa de métricas.
 void MainWindow::updateStatusLabel(const QString &statusText) {
     if (ui->valStatus) {
         ui->valStatus->setText(statusText);
     }
 }
 
+// Executa um ciclo completo e, em seguida, sincroniza métricas e logs.
 void MainWindow::performSimulationStep() {
     if (core.instructionMemory.empty()) {
         stopSimulation();
