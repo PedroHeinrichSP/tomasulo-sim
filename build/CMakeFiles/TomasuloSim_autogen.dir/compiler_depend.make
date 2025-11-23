@@ -101,6 +101,7 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
   /usr/include/c++/15/algorithm \
@@ -116,15 +117,19 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/bits/allocator.h \
   /usr/include/c++/15/bits/atomic_base.h \
   /usr/include/c++/15/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/15/bits/basic_ios.h \
+  /usr/include/c++/15/bits/basic_ios.tcc \
   /usr/include/c++/15/bits/basic_string.h \
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
   /usr/include/c++/15/bits/chrono.h \
+  /usr/include/c++/15/bits/codecvt.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
   /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/deque.tcc \
   /usr/include/c++/15/bits/enable_special_members.h \
   /usr/include/c++/15/bits/erase_if.h \
   /usr/include/c++/15/bits/exception.h \
@@ -137,9 +142,15 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/bits/hashtable_policy.h \
   /usr/include/c++/15/bits/invoke.h \
   /usr/include/c++/15/bits/ios_base.h \
+  /usr/include/c++/15/bits/istream.tcc \
   /usr/include/c++/15/bits/list.tcc \
   /usr/include/c++/15/bits/locale_classes.h \
   /usr/include/c++/15/bits/locale_classes.tcc \
+  /usr/include/c++/15/bits/locale_conv.h \
+  /usr/include/c++/15/bits/locale_facets.h \
+  /usr/include/c++/15/bits/locale_facets.tcc \
+  /usr/include/c++/15/bits/locale_facets_nonio.h \
+  /usr/include/c++/15/bits/locale_facets_nonio.tcc \
   /usr/include/c++/15/bits/localefwd.h \
   /usr/include/c++/15/bits/memory_resource.h \
   /usr/include/c++/15/bits/memoryfwd.h \
@@ -147,11 +158,14 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/bits/nested_exception.h \
   /usr/include/c++/15/bits/new_allocator.h \
   /usr/include/c++/15/bits/node_handle.h \
+  /usr/include/c++/15/bits/ostream.h \
+  /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
   /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/quoted_string.h \
   /usr/include/c++/15/bits/range_access.h \
   /usr/include/c++/15/bits/refwrap.h \
   /usr/include/c++/15/bits/requires_hosted.h \
@@ -159,12 +173,14 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/bits/shared_ptr_atomic.h \
   /usr/include/c++/15/bits/shared_ptr_base.h \
   /usr/include/c++/15/bits/specfun.h \
+  /usr/include/c++/15/bits/sstream.tcc \
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/std_function.h \
   /usr/include/c++/15/bits/stl_algo.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_deque.h \
   /usr/include/c++/15/bits/stl_function.h \
   /usr/include/c++/15/bits/stl_heap.h \
   /usr/include/c++/15/bits/stl_iterator.h \
@@ -176,6 +192,7 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/bits/stl_multiset.h \
   /usr/include/c++/15/bits/stl_numeric.h \
   /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_queue.h \
   /usr/include/c++/15/bits/stl_raw_storage_iter.h \
   /usr/include/c++/15/bits/stl_relops.h \
   /usr/include/c++/15/bits/stl_set.h \
@@ -213,8 +230,10 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/cstring \
   /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
   /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/deque \
   /usr/include/c++/15/exception \
   /usr/include/c++/15/ext/aligned_buffer.h \
   /usr/include/c++/15/ext/alloc_traits.h \
@@ -225,20 +244,27 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/ext/type_traits.h \
   /usr/include/c++/15/functional \
   /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iomanip \
+  /usr/include/c++/15/ios \
   /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/istream \
   /usr/include/c++/15/iterator \
   /usr/include/c++/15/limits \
   /usr/include/c++/15/list \
+  /usr/include/c++/15/locale \
   /usr/include/c++/15/map \
   /usr/include/c++/15/memory \
   /usr/include/c++/15/new \
   /usr/include/c++/15/numeric \
   /usr/include/c++/15/optional \
+  /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/execution_defs.h \
   /usr/include/c++/15/pstl/glue_numeric_defs.h \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/queue \
   /usr/include/c++/15/ratio \
   /usr/include/c++/15/set \
+  /usr/include/c++/15/sstream \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -270,10 +296,14 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/c++/15/x86_64-suse-linux/bits/c++config.h \
   /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h \
   /usr/include/c++/15/x86_64-suse-linux/bits/cpu_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h \
   /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h \
   /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h \
   /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h \
   /usr/include/c++/15/x86_64-suse-linux/bits/os_defines.h \
+  /usr/include/c++/15/x86_64-suse-linux/bits/time_members.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -281,6 +311,7 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
@@ -290,6 +321,7 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/linux/types.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
+  /usr/include/qt6/QtCore/QStringList \
   /usr/include/qt6/QtCore/QTimer \
   /usr/include/qt6/QtCore/q17memory.h \
   /usr/include/qt6/QtCore/q20functional.h \
@@ -491,6 +523,7 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
   /usr/include/sys/types.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/lib64/cmake/Qt6/FindWrapAtomic.cmake \
   /usr/lib64/cmake/Qt6/FindWrapOpenGL.cmake \
   /usr/lib64/cmake/Qt6/FindWrapVulkanHeaders.cmake \
@@ -716,8 +749,6 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/lib64/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
 
-/usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
-
 /usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake:
 
 /usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake:
@@ -764,29 +795,63 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake:
 
-/usr/include/c++/15/tr1/special_function_util.h:
+/usr/lib64/cmake/Qt6Core/Qt6CoreTargets.cmake:
 
-/usr/include/c++/15/tr1/riemann_zeta.tcc:
+/usr/lib64/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake:
 
-/usr/include/c++/15/tr1/modified_bessel_func.tcc:
+/usr/lib64/cmake/Qt6Core/Qt6CoreMacros.cmake:
 
-/usr/include/c++/15/tr1/legendre_function.tcc:
+/usr/lib64/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
 
-/usr/include/c++/15/system_error:
+/usr/lib64/cmake/Qt6Core/Qt6CoreConfigVersion.cmake:
 
-/usr/include/bits/endian.h:
+/usr/lib64/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
 
-/usr/include/qt6/QtCore/qstring.h:
+/usr/lib64/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
 
-/usr/include/c++/15/stdexcept:
+/usr/lib64/cmake/Qt6/QtPublicWindowsHelpers.cmake:
 
-/usr/include/c++/15/atomic:
+/usr/lib64/cmake/Qt6/QtPublicToolHelpers.cmake:
 
-/usr/include/c++/15/set:
+/usr/lib64/cmake/Qt6/QtPublicTestHelpers.cmake:
 
-/usr/include/qt6/QtCore/qnamespace.h:
+/usr/lib64/cmake/Qt6/QtPublicTargetHelpers.cmake:
 
-/usr/include/c++/15/pstl/pstl_config.h:
+/usr/lib64/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
+
+/usr/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
+
+/usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake:
+
+/usr/lib64/cmake/Qt6DBus/Qt6DBusConfig.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicPluginHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicGitHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicExternalProjectHelpers.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicDependencyHelpers.cmake:
+
+/usr/include/c++/15/bits/exception.h:
+
+/usr/include/strings.h:
+
+/usr/lib64/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
 
 /usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake:
 
@@ -797,6 +862,12 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 /usr/include/c++/15/new:
 
 /usr/include/linux/errno.h:
+
+/usr/lib64/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
+
+/usr/include/c++/15/locale:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h:
 
 /usr/include/c++/15/limits:
 
@@ -820,19 +891,19 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/qt6/QtCore/qshareddata.h:
 
-/usr/include/c++/15/ext/numeric_traits.h:
-
 /usr/include/c++/15/ext/alloc_traits.h:
 
 /usr/include/qt6/QtCore/qdarwinhelpers.h:
 
 /usr/include/c++/15/ext/aligned_buffer.h:
 
-/usr/include/qt6/QtCore/qabstractitemmodel.h:
-
 /usr/include/c++/15/bits/list.tcc:
 
 /usr/include/qt6/QtGui/qtguiexports.h:
+
+/usr/include/c++/15/deque:
+
+/usr/include/qt6/QtCore/qtextstream.h:
 
 /usr/include/c++/15/ctime:
 
@@ -844,11 +915,9 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/c++/15/chrono:
 
-/usr/include/qt6/QtGui/qpen.h:
-
-/usr/include/c++/15/bits/unordered_set.h:
-
 /usr/include/c++/15/bits/uniform_int_dist.h:
+
+/usr/include/c++/15/cwctype:
 
 /usr/include/c++/15/bits/functexcept.h:
 
@@ -866,6 +935,8 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/c++/15/bits/stl_tempbuf.h:
 
+/usr/include/c++/15/bits/deque.tcc:
+
 /usr/include/c++/15/bits/stl_set.h:
 
 /home/Heinrich/tomasulo-sim/src/ui/mainwindow.ui:
@@ -881,6 +952,10 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 /usr/share/cmake/Modules/FindPackageMessage.cmake:
 
 /usr/include/c++/15/bits/stl_bvector.h:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomCpeHelpers.cmake:
+
+/usr/include/c++/15/bits/stl_numeric.h:
 
 /usr/include/c++/15/x86_64-suse-linux/bits/atomic_word.h:
 
@@ -916,6 +991,8 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/qt6/QtGui/qaction.h:
 
+/usr/include/c++/15/bits/stl_deque.h:
+
 /usr/include/bits/types/struct_tm.h:
 
 /usr/include/c++/15/bits/ptr_traits.h:
@@ -934,13 +1011,27 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/c++/15/bits/std_function.h:
 
-/usr/lib64/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
+/usr/include/c++/15/bits/codecvt.h:
+
+/usr/include/c++/15/ios:
 
 /usr/include/c++/15/bits/std_abs.h:
 
-/usr/include/c++/15/exception:
+/usr/include/c++/15/bits/sstream.tcc:
 
-/usr/include/c++/15/backward/binders.h:
+/usr/include/c++/15/ext/numeric_traits.h:
+
+/usr/include/c++/15/bits/quoted_string.h:
+
+/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
+
+/usr/include/c++/15/bits/postypes.h:
+
+/usr/lib64/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
+
+/usr/include/bits/local_lim.h:
 
 /usr/include/c++/15/x86_64-suse-linux/bits/error_constants.h:
 
@@ -954,9 +1045,29 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/qt6/QtWidgets/QMainWindow:
 
-/usr/lib64/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
+/usr/include/c++/15/bits/ostream.tcc:
+
+/usr/include/qt6/QtCore/qexceptionhandling.h:
 
 /usr/include/linux/sched/types.h:
+
+/usr/include/c++/15/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/15/backward/binders.h:
+
+/usr/include/c++/15/exception:
+
+/usr/include/qt6/QtCore/qabstractitemmodel.h:
+
+/usr/include/bits/types/wint_t.h:
+
+/usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
+
+/usr/include/c++/15/bits/istream.tcc:
+
+/usr/include/c++/15/bits/exception_ptr.h:
+
+/usr/lib64/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
 
 /usr/include/c++/15/bits/ios_base.h:
 
@@ -978,15 +1089,27 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/qt6/QtCore/qcontainertools_impl.h:
 
+/usr/include/asm/posix_types_64.h:
+
 /usr/include/c++/15/ext/type_traits.h:
 
 /usr/include/c++/15/bits/functional_hash.h:
 
 /usr/include/errno.h:
 
-/usr/include/bits/pthreadtypes.h:
+/usr/include/c++/15/initializer_list:
 
-/usr/lib64/cmake/Qt6/QtPublicToolHelpers.cmake:
+/usr/include/c++/15/ext/concurrence.h:
+
+/usr/include/c++/15/ext/atomicity.h:
+
+/usr/include/c++/15/bits/stl_iterator_base_funcs.h:
+
+/usr/include/qt6/QtGui/qpen.h:
+
+/usr/include/c++/15/bits/unordered_set.h:
+
+/usr/include/bits/pthreadtypes.h:
 
 /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
@@ -1004,17 +1127,29 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/bits/posix1_lim.h:
 
+/usr/include/c++/15/sstream:
+
+/usr/lib64/cmake/Qt6/FindWrapAtomic.cmake:
+
+/usr/include/wchar.h:
+
 /usr/include/qt6/QtCore/qtresource.h:
 
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/asm/errno.h:
+/usr/include/bits/endian.h:
 
-/usr/lib64/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
+/usr/include/c++/15/system_error:
+
+/usr/include/asm/errno.h:
 
 /usr/include/c++/15/x86_64-suse-linux/bits/gthr.h:
 
 /usr/include/c++/15/cstdio:
+
+/usr/lib64/cmake/Qt6Core/Qt6CoreDependencies.cmake:
+
+/usr/include/bits/atomic_wide_counter.h:
 
 /usr/include/c++/15/cassert:
 
@@ -1032,33 +1167,17 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/bits/types/clockid_t.h:
 
-/usr/include/bits/stdint-intn.h:
-
 /usr/include/c++/15/typeinfo:
-
-/usr/include/asm/posix_types_64.h:
-
-/usr/lib64/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
-
-/usr/include/c++/15/pstl/execution_defs.h:
-
-/home/Heinrich/tomasulo-sim/CMakeLists.txt:
 
 /usr/include/c++/15/bits/allocator.h:
 
 /usr/include/bits/types/__sigset_t.h:
-
-/usr/include/c++/15/type_traits:
-
-/usr/lib64/cmake/Qt6/Qt6ConfigExtras.cmake:
 
 /usr/include/bits/floatn.h:
 
 /usr/include/bits/floatn-common.h:
 
 /usr/include/qt6/QtWidgets/qtabwidget.h:
-
-/usr/lib64/cmake/Qt6/QtPublicGitHelpers.cmake:
 
 /home/Heinrich/tomasulo-sim/src/ui/simulator/reservation_station.cpp:
 
@@ -1070,11 +1189,15 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 
 /usr/include/qt6/QtWidgets/qmainwindow.h:
 
+/usr/include/c++/15/istream:
+
 /home/Heinrich/tomasulo-sim/src/ui/simulator/reorder_buffer.h:
 
 /usr/include/bits/types/locale_t.h:
 
 /usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:
+
+/usr/include/c++/15/bits/ostream.h:
 
 /usr/include/c++/15/bits/stl_raw_storage_iter.h:
 
@@ -1085,10 +1208,6 @@ TomasuloSim_autogen/timestamp: /home/Heinrich/tomasulo-sim/CMakeLists.txt \
 /usr/include/c++/15/memory:
 
 /usr/include/qt6/QtCore/qbytearray.h:
-
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
-/home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp:
 
 /usr/include/asm/types.h:
 
@@ -1120,17 +1239,25 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /usr/include/qt6/QtCore/qlist.h:
 
-/usr/include/c++/15/tr1/bessel_function.tcc:
-
 /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.h:
 
+/usr/include/c++/15/bits/erase_if.h:
+
+/usr/include/c++/15/bits/stringfwd.h:
+
+/usr/include/qt6/QtGui/qpaintdevice.h:
+
+/usr/include/qt6/QtCore/qtdeprecationdefinitions.h:
+
+/usr/include/asm/posix_types.h:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
+
+/usr/include/bits/time.h:
+
+/usr/include/c++/15/bits/alloc_traits.h:
+
 /usr/include/bits/byteswap.h:
-
-/usr/include/c++/15/ext/concurrence.h:
-
-/usr/include/c++/15/ext/atomicity.h:
-
-/usr/include/c++/15/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/15/bits/unique_ptr.h:
 
@@ -1142,6 +1269,8 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /usr/include/alloca.h:
 
+/usr/include/c++/15/bits/locale_facets_nonio.h:
+
 /home/Heinrich/tomasulo-sim/src/ui/mainwindow.cpp:
 
 /usr/include/c++/15/bits/stream_iterator.h:
@@ -1150,17 +1279,9 @@ CMakeFiles/4.1.2/CMakeCXXCompiler.cmake:
 
 /usr/include/bits/types/__mbstate_t.h:
 
-/usr/include/bits/types/wint_t.h:
-
 /usr/include/bits/endianness.h:
 
 CMakeFiles/4.1.2/CMakeSystem.cmake:
-
-/usr/include/c++/15/bits/stringfwd.h:
-
-/usr/include/c++/15/bits/erase_if.h:
-
-/usr/include/qt6/QtGui/qpaintdevice.h:
 
 /usr/include/c++/15/bits/utility.h:
 
@@ -1176,6 +1297,8 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 
 /usr/include/bits/types/mbstate_t.h:
 
+/usr/include/c++/15/bits/stl_queue.h:
+
 /usr/include/bits/uio_lim.h:
 
 /home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.cpp:
@@ -1185,12 +1308,6 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 /home/Heinrich/tomasulo-sim/src/ui/mainwindow.h:
 
 /usr/include/qt6/QtCore/qscopeguard.h:
-
-/home/Heinrich/tomasulo-sim/src/ui/simulator/simulator_utils.h:
-
-/usr/include/c++/15/tr1/beta_function.tcc:
-
-/usr/include/c++/15/unordered_set:
 
 /usr/include/asm-generic/int-ll64.h:
 
@@ -1236,21 +1353,9 @@ CMakeFiles/4.1.2/CMakeSystem.cmake:
 
 /usr/include/qt6/QtCore/qcompare.h:
 
-/usr/include/c++/15/bits/exception_ptr.h:
-
-/usr/lib64/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
-
 /usr/include/bits/types/__locale_t.h:
 
 /home/Heinrich/tomasulo-sim/src/ui/simulator/common_data_bus.cpp:
-
-/usr/include/c++/15/bits/alloc_traits.h:
-
-/usr/include/c++/15/ratio:
-
-/usr/include/c++/15/bits/stl_map.h:
-
-/usr/include/qt6/QtCore/qsharedpointer.h:
 
 /usr/include/bits/posix2_lim.h:
 
@@ -1263,6 +1368,12 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/c++/15/bits/refwrap.h:
 
 /usr/include/c++/15/map:
+
+/usr/include/bits/pthread_stack_min-dynamic.h:
+
+/home/Heinrich/tomasulo-sim/src/ui/simulator/instruction.cpp:
+
+/usr/include/qt6/QtCore/QStringList:
 
 /usr/include/c++/15/bits/invoke.h:
 
@@ -1283,12 +1394,6 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/qt6/QtWidgets/qabstractitemview.h:
 
 /usr/include/c++/15/bits/hashtable.h:
-
-/usr/include/c++/15/bits/memory_resource.h:
-
-/usr/include/c++/15/bits/stl_function.h:
-
-/usr/include/bits/types/struct_itimerspec.h:
 
 /usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake:
 
@@ -1318,17 +1423,11 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/bits/timex.h:
 
-/usr/include/c++/15/tr1/exp_integral.tcc:
-
-/usr/include/qt6/QtCore/qtimer.h:
-
-/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
-
-/usr/include/qt6/QtWidgets/qstyle.h:
-
-/usr/include/c++/15/bits/streambuf_iterator.h:
-
 /usr/include/c++/15/x86_64-suse-linux/bits/gthr-default.h:
+
+/usr/lib64/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
+
+/usr/include/bits/types.h:
 
 /usr/include/qt6/QtCore/qtaggedpointer.h:
 
@@ -1348,7 +1447,9 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/bits/types/__fpos64_t.h:
 
-/usr/include/c++/15/tr1/poly_laguerre.tcc:
+/usr/include/c++/15/bits/specfun.h:
+
+/usr/include/bits/types/__fpos_t.h:
 
 /usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake:
 
@@ -1356,15 +1457,23 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/c++/15/bits/charconv.h:
 
-/usr/include/c++/15/bits/specfun.h:
-
-/usr/include/bits/types/__fpos_t.h:
-
-/usr/include/c++/15/tr1/poly_hermite.tcc:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
+/usr/include/c++/15/tr1/poly_laguerre.tcc:
 
 /usr/include/bits/types/sigset_t.h:
+
+/usr/include/qt6/QtGui/qfontmetrics.h:
+
+/usr/include/c++/15/bits/cxxabi_init_exception.h:
+
+/usr/lib64/cmake/Qt6/QtFeatureCommon.cmake:
+
+/usr/include/c++/15/bits/shared_ptr_atomic.h:
+
+/usr/include/bits/types/struct_sched_param.h:
+
+/usr/include/c++/15/bits/locale_conv.h:
+
+/usr/include/qt6/QtCore/qcomparehelpers.h:
 
 /usr/include/bits/waitflags.h:
 
@@ -1388,37 +1497,49 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/bits/wordsize.h:
 
+/usr/include/c++/15/x86_64-suse-linux/bits/messages_members.h:
+
 /usr/include/stdio.h:
 
 /usr/include/qt6/QtCore/q20functional.h:
 
 /usr/include/c++/15/bits/align.h:
 
-/usr/include/c++/15/string:
-
-/usr/include/bits/timesize.h:
-
 /usr/include/qt6/QtCore/qiterator.h:
 
 /usr/include/qt6/QtCore/qminmax.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/bits/wctype-wchar.h:
+
+/usr/include/c++/15/bits/cpp_type_traits.h:
+
+/usr/include/c++/15/bits/range_access.h:
 
 /usr/include/c++/15/bits/string_view.tcc:
 
 /usr/include/bits/xopen_lim.h:
 
-/usr/include/c++/15/bits/range_access.h:
-
-/usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake:
-
-/usr/include/c++/15/tuple:
-
 /home/Heinrich/tomasulo-sim/src/ui/simulator/register_file.cpp:
 
 /usr/include/c++/15/array:
 
+/usr/include/c++/15/iomanip:
+
 /usr/include/c++/15/bits/shared_ptr.h:
 
 /usr/include/qt6/QtCore/qobjectdefs_impl.h:
+
+/usr/include/c++/15/atomic:
+
+/usr/include/c++/15/bits/stl_map.h:
+
+/usr/include/qt6/QtCore/qsharedpointer.h:
+
+/usr/include/c++/15/ratio:
+
+/usr/include/c++/15/stdexcept:
 
 /usr/include/c++/15/bits/atomic_base.h:
 
@@ -1428,45 +1549,91 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/q20iterator.h:
 
+/usr/include/c++/15/bits/stl_function.h:
+
+/usr/include/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/15/bits/memory_resource.h:
+
+/usr/include/c++/15/set:
+
+/usr/include/qt6/QtCore/qnamespace.h:
+
 /usr/include/c++/15/bits/atomic_lockfree_defines.h:
-
-/usr/include/c++/15/streambuf:
-
-/usr/include/qt6/QtCore/qanystringview.h:
 
 /home/Heinrich/tomasulo-sim/src/ui/resources.qrc:
 
-/usr/include/c++/15/bits/cpp_type_traits.h:
+/usr/include/c++/15/ostream:
 
 /usr/include/c++/15/bits/basic_string.h:
-
-/usr/include/c++/15/bits/shared_ptr_atomic.h:
-
-/usr/include/bits/types/struct_sched_param.h:
-
-/usr/include/c++/15/bits/cxxabi_init_exception.h:
-
-/usr/lib64/cmake/Qt6/QtFeatureCommon.cmake:
 
 /usr/include/c++/15/bits/algorithmfwd.h:
 
 /usr/include/asm/bitsperlong.h:
 
-/usr/include/c++/15/initializer_list:
+/usr/lib64/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
 
-/usr/include/c++/15/bits/exception.h:
+/home/Heinrich/tomasulo-sim/CMakeLists.txt:
 
-/usr/include/asm/posix_types.h:
+/usr/include/c++/15/pstl/execution_defs.h:
 
-/usr/include/qt6/QtCore/qtdeprecationdefinitions.h:
+/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
 
-/usr/include/strings.h:
+/usr/include/c++/15/bits/streambuf_iterator.h:
 
-/usr/lib64/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
+/usr/include/qt6/QtWidgets/qstyle.h:
+
+/usr/include/c++/15/bits/basic_ios.tcc:
+
+/usr/include/c++/15/pstl/pstl_config.h:
+
+/usr/share/cmake/Modules/GoogleTest.cmake:
+
+/usr/include/qt6/QtCore/qatomic_cxx11.h:
+
+/usr/include/c++/15/streambuf:
+
+/usr/include/qt6/QtCore/qanystringview.h:
+
+/usr/include/bits/timesize.h:
+
+/usr/include/c++/15/string:
+
+/usr/include/qt6/QtCore/qstring.h:
+
+/usr/include/c++/15/tr1/bessel_function.tcc:
+
+/usr/include/c++/15/tr1/beta_function.tcc:
+
+/usr/include/c++/15/unordered_set:
+
+/usr/include/c++/15/tr1/exp_integral.tcc:
+
+/usr/include/qt6/QtCore/qtimer.h:
+
+/usr/include/c++/15/tr1/legendre_function.tcc:
+
+/usr/include/c++/15/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/15/tr1/poly_hermite.tcc:
+
+/usr/include/c++/15/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/15/tr1/special_function_util.h:
+
+/usr/lib64/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake:
+
+/usr/include/c++/15/tuple:
+
+/usr/include/c++/15/type_traits:
+
+/usr/lib64/cmake/Qt6/Qt6ConfigExtras.cmake:
 
 /usr/include/c++/15/utility:
 
 /usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15/bits/basic_ios.h:
 
 /usr/include/c++/15/variant:
 
@@ -1481,6 +1648,10 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
 
 /usr/include/c++/15/x86_64-suse-linux/bits/c++locale.h:
+
+/usr/include/c++/15/x86_64-suse-linux/bits/ctype_base.h:
+
+/usr/include/c++/15/x86_64-suse-linux/bits/ctype_inline.h:
 
 /usr/share/cmake/Modules/CMakeGenericSystem.cmake:
 
@@ -1544,21 +1715,17 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/c++/15/cstdlib:
 
+/usr/include/c++/15/x86_64-suse-linux/bits/time_members.h:
+
 /usr/include/qt6/QtCore/qflags.h:
 
 /usr/include/c++/15/unordered_map:
 
 /usr/include/qt6/QtCore/qarraydatapointer.h:
 
-/usr/share/cmake/Modules/GoogleTest.cmake:
-
-/usr/include/qt6/QtCore/qatomic_cxx11.h:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreDependencies.cmake:
-
 /usr/lib64/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake:
+
+/usr/include/c++/15/queue:
 
 /usr/include/qt6/QtCore/qbindingstorage.h:
 
@@ -1580,8 +1747,6 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qcompare_impl.h:
 
-/usr/include/qt6/QtCore/qcomparehelpers.h:
-
 /usr/include/qt6/QtCore/qconstructormacros.h:
 
 /usr/share/cmake/Modules/Platform/UnixPaths.cmake:
@@ -1591,12 +1756,6 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/qt6/QtCore/qcontainerfwd.h:
 
 /usr/include/qt6/QtCore/qcontiguouscache.h:
-
-/usr/lib64/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
-
-/usr/include/c++/15/bits/postypes.h:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
 
 /usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake:
 
@@ -1611,8 +1770,6 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/qt6/QtCore/qdebug.h:
 
 /usr/include/qt6/QtCore/qendian.h:
-
-/usr/include/qt6/QtCore/qexceptionhandling.h:
 
 /usr/include/qt6/QtCore/qfloat16.h:
 
@@ -1639,6 +1796,12 @@ TomasuloSim_autogen/moc_predefs.h:
 /usr/include/qt6/QtCore/qlogging.h:
 
 /usr/include/qt6/QtCore/qmap.h:
+
+/usr/share/cmake/Modules/MacroAddFileDependencies.cmake:
+
+/usr/lib64/cmake/Qt6Core/Qt6CoreConfig.cmake:
+
+/usr/include/qt6/QtCore/qmargins.h:
 
 /usr/include/qt6/QtCore/qmath.h:
 
@@ -1682,6 +1845,14 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qspan.h:
 
+/usr/include/qt6/QtGui/qpixmap.h:
+
+/usr/include/qt6/QtCore/qstringconverter_base.h:
+
+/usr/lib64/cmake/Qt6/QtPublicAppleHelpers.cmake:
+
+/usr/include/qt6/QtCore/qstringfwd.h:
+
 /usr/include/qt6/QtCore/qstringlist.h:
 
 /usr/include/qt6/QtCore/qstringliteral.h:
@@ -1708,6 +1879,8 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qtclasshelpermacros.h:
 
+/usr/include/c++/15/bits/locale_facets.h:
+
 /usr/include/gnu/stubs.h:
 
 /usr/include/qt6/QtCore/qtconfigmacros.h:
@@ -1726,13 +1899,13 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtCore/qtenvironmentvariables.h:
 
-/usr/include/qt6/QtCore/qtextstream.h:
-
-/usr/include/wchar.h:
-
-/usr/lib64/cmake/Qt6/FindWrapAtomic.cmake:
-
 /usr/include/qt6/QtCore/qtformat_impl.h:
+
+/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
+
+/usr/lib64/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
+
+/usr/include/qt6/QtCore/qtmetamacros.h:
 
 /usr/include/qt6/QtCore/qtpreprocessorsupport.h:
 
@@ -1778,8 +1951,6 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtGui/qcursor.h:
 
-/usr/include/qt6/QtGui/qfontmetrics.h:
-
 /usr/lib64/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:
 
 /usr/include/qt6/QtCore/qbasictimer.h:
@@ -1792,17 +1963,9 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtGui/qpixelformat.h:
 
-/usr/include/qt6/QtCore/qstringconverter_base.h:
-
-/usr/include/qt6/QtGui/qpixmap.h:
-
 /usr/bin/cmake:
 
 /usr/include/qt6/QtGui/qrgb.h:
-
-/usr/include/bits/local_lim.h:
-
-/usr/lib64/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
 
 /usr/include/qt6/QtGui/qfont.h:
 
@@ -1820,23 +1983,25 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/qt6/QtWidgets/qstyleoption.h:
 
+/usr/include/libintl.h:
+
 /usr/include/qt6/QtWidgets/qtabbar.h:
 
 /usr/include/qt6/QtWidgets/qtwidgetsexports.h:
 
 /usr/include/qt6/QtWidgets/qtwidgetsglobal.h:
 
-/usr/include/c++/15/bits/stl_numeric.h:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomCpeHelpers.cmake:
-
 /usr/lib64/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake:
 
 /usr/include/sched.h:
 
+/usr/include/wctype.h:
+
 /usr/include/c++/15/tr1/ell_integral.tcc:
 
 /usr/include/stdc-predef.h:
+
+/usr/include/c++/15/bits/locale_facets.tcc:
 
 /usr/include/qt6/QtCore/qrect.h:
 
@@ -1852,9 +2017,9 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/include/sys/types.h:
 
-/usr/include/c++/15/tr1/hypergeometric.tcc:
-
 /usr/include/qt6/QtCore/qlocale.h:
+
+/usr/include/c++/15/tr1/hypergeometric.tcc:
 
 /usr/include/time.h:
 
@@ -1874,72 +2039,6 @@ TomasuloSim_autogen/moc_predefs.h:
 
 /usr/lib64/cmake/Qt6/QtInstallPaths.cmake:
 
-/usr/lib64/cmake/Qt6/QtPublicDependencyHelpers.cmake:
-
 /usr/include/asm-generic/posix_types.h:
 
 /usr/lib64/cmake/Qt6/QtPublicAndroidHelpers.cmake:
-
-/usr/include/qt6/QtCore/qstringfwd.h:
-
-/usr/lib64/cmake/Qt6/QtPublicAppleHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicExternalProjectHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
-
-/usr/lib64/cmake/Qt6DBus/Qt6DBusConfig.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicPluginHelpers.cmake:
-
-/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
-
-/usr/include/qt6/QtCore/qtmetamacros.h:
-
-/usr/lib64/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
-
-/usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake:
-
-/usr/include/bits/types.h:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake:
-
-/usr/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
-
-/usr/include/bits/time.h:
-
-/usr/lib64/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicTargetHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicTestHelpers.cmake:
-
-/usr/lib64/cmake/Qt6/QtPublicWindowsHelpers.cmake:
-
-/usr/share/cmake/Modules/MacroAddFileDependencies.cmake:
-
-/usr/include/qt6/QtCore/qmargins.h:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreConfig.cmake:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreTargets.cmake:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreConfigVersion.cmake:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreMacros.cmake:
-
-/usr/lib64/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake:

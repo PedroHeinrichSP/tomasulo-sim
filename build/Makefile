@@ -714,6 +714,30 @@ src/ui/simulator/tomasulo_core.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/src/ui/simulator/tomasulo_core.cpp.s
 .PHONY : src/ui/simulator/tomasulo_core.cpp.s
 
+tests/test_branch_logic.o: tests/test_branch_logic.cpp.o
+.PHONY : tests/test_branch_logic.o
+
+# target to build an object file
+tests/test_branch_logic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_branch_logic.cpp.o
+.PHONY : tests/test_branch_logic.cpp.o
+
+tests/test_branch_logic.i: tests/test_branch_logic.cpp.i
+.PHONY : tests/test_branch_logic.i
+
+# target to preprocess a source file
+tests/test_branch_logic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_branch_logic.cpp.i
+.PHONY : tests/test_branch_logic.cpp.i
+
+tests/test_branch_logic.s: tests/test_branch_logic.cpp.s
+.PHONY : tests/test_branch_logic.s
+
+# target to generate assembly for a file
+tests/test_branch_logic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_branch_logic.cpp.s
+.PHONY : tests/test_branch_logic.cpp.s
+
 tests/test_common_data_bus.o: tests/test_common_data_bus.cpp.o
 .PHONY : tests/test_common_data_bus.o
 
@@ -834,6 +858,54 @@ tests/test_reservation_station.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_reservation_station.cpp.s
 .PHONY : tests/test_reservation_station.cpp.s
 
+tests/test_step_by_step.o: tests/test_step_by_step.cpp.o
+.PHONY : tests/test_step_by_step.o
+
+# target to build an object file
+tests/test_step_by_step.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_step_by_step.cpp.o
+.PHONY : tests/test_step_by_step.cpp.o
+
+tests/test_step_by_step.i: tests/test_step_by_step.cpp.i
+.PHONY : tests/test_step_by_step.i
+
+# target to preprocess a source file
+tests/test_step_by_step.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_step_by_step.cpp.i
+.PHONY : tests/test_step_by_step.cpp.i
+
+tests/test_step_by_step.s: tests/test_step_by_step.cpp.s
+.PHONY : tests/test_step_by_step.s
+
+# target to generate assembly for a file
+tests/test_step_by_step.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_step_by_step.cpp.s
+.PHONY : tests/test_step_by_step.cpp.s
+
+tests/test_tomasulo_core.o: tests/test_tomasulo_core.cpp.o
+.PHONY : tests/test_tomasulo_core.o
+
+# target to build an object file
+tests/test_tomasulo_core.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_tomasulo_core.cpp.o
+.PHONY : tests/test_tomasulo_core.cpp.o
+
+tests/test_tomasulo_core.i: tests/test_tomasulo_core.cpp.i
+.PHONY : tests/test_tomasulo_core.i
+
+# target to preprocess a source file
+tests/test_tomasulo_core.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_tomasulo_core.cpp.i
+.PHONY : tests/test_tomasulo_core.cpp.i
+
+tests/test_tomasulo_core.s: tests/test_tomasulo_core.cpp.s
+.PHONY : tests/test_tomasulo_core.s
+
+# target to generate assembly for a file
+tests/test_tomasulo_core.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_unit_tests.dir/build.make CMakeFiles/run_unit_tests.dir/tests/test_tomasulo_core.cpp.s
+.PHONY : tests/test_tomasulo_core.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -901,6 +973,9 @@ help:
 	@echo "... src/ui/simulator/tomasulo_core.o"
 	@echo "... src/ui/simulator/tomasulo_core.i"
 	@echo "... src/ui/simulator/tomasulo_core.s"
+	@echo "... tests/test_branch_logic.o"
+	@echo "... tests/test_branch_logic.i"
+	@echo "... tests/test_branch_logic.s"
 	@echo "... tests/test_common_data_bus.o"
 	@echo "... tests/test_common_data_bus.i"
 	@echo "... tests/test_common_data_bus.s"
@@ -916,6 +991,12 @@ help:
 	@echo "... tests/test_reservation_station.o"
 	@echo "... tests/test_reservation_station.i"
 	@echo "... tests/test_reservation_station.s"
+	@echo "... tests/test_step_by_step.o"
+	@echo "... tests/test_step_by_step.i"
+	@echo "... tests/test_step_by_step.s"
+	@echo "... tests/test_tomasulo_core.o"
+	@echo "... tests/test_tomasulo_core.i"
+	@echo "... tests/test_tomasulo_core.s"
 .PHONY : help
 
 

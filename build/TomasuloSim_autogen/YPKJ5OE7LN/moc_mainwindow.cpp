@@ -48,7 +48,7 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "onActionSairTriggered",
         "onActionSobreTriggered",
         "onThemeChanged",
-        "onRunTick"
+        "performSimulationStep"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -68,7 +68,7 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onThemeChanged'
         QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onRunTick'
+        // Slot 'performSimulationStep'
         QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
@@ -101,7 +101,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 5: _t->onActionSairTriggered(); break;
         case 6: _t->onActionSobreTriggered(); break;
         case 7: _t->onThemeChanged(); break;
-        case 8: _t->onRunTick(); break;
+        case 8: _t->performSimulationStep(); break;
         default: ;
         }
     }

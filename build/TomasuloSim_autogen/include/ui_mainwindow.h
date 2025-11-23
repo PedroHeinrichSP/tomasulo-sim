@@ -79,6 +79,12 @@ public:
     QLabel *valIPC;
     QLabel *lblCiclos;
     QLabel *valCiclos;
+    QLabel *lblCommits;
+    QLabel *valCommits;
+    QLabel *lblBubbles;
+    QLabel *valBubbles;
+    QLabel *lblStatus;
+    QLabel *valStatus;
     QMenuBar *menubar;
     QMenu *menuArquivo;
     QMenu *menuExibir;
@@ -243,6 +249,36 @@ public:
 
         formLayout->setWidget(1, QFormLayout::ItemRole::FieldRole, valCiclos);
 
+        lblCommits = new QLabel(metricsBox);
+        lblCommits->setObjectName("lblCommits");
+
+        formLayout->setWidget(2, QFormLayout::ItemRole::LabelRole, lblCommits);
+
+        valCommits = new QLabel(metricsBox);
+        valCommits->setObjectName("valCommits");
+
+        formLayout->setWidget(2, QFormLayout::ItemRole::FieldRole, valCommits);
+
+        lblBubbles = new QLabel(metricsBox);
+        lblBubbles->setObjectName("lblBubbles");
+
+        formLayout->setWidget(3, QFormLayout::ItemRole::LabelRole, lblBubbles);
+
+        valBubbles = new QLabel(metricsBox);
+        valBubbles->setObjectName("valBubbles");
+
+        formLayout->setWidget(3, QFormLayout::ItemRole::FieldRole, valBubbles);
+
+        lblStatus = new QLabel(metricsBox);
+        lblStatus->setObjectName("lblStatus");
+
+        formLayout->setWidget(4, QFormLayout::ItemRole::LabelRole, lblStatus);
+
+        valStatus = new QLabel(metricsBox);
+        valStatus->setObjectName("valStatus");
+
+        formLayout->setWidget(4, QFormLayout::ItemRole::FieldRole, valStatus);
+
         splitter->addWidget(metricsBox);
 
         mainLayout->addWidget(splitter);
@@ -295,6 +331,12 @@ public:
         valIPC->setText(QCoreApplication::translate("MainWindow", "0.00", nullptr));
         lblCiclos->setText(QCoreApplication::translate("MainWindow", "Ciclos:", nullptr));
         valCiclos->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        lblCommits->setText(QCoreApplication::translate("MainWindow", "Instru\303\247\303\265es confirmadas:", nullptr));
+        valCommits->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        lblBubbles->setText(QCoreApplication::translate("MainWindow", "Ciclos de bolha:", nullptr));
+        valBubbles->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        lblStatus->setText(QCoreApplication::translate("MainWindow", "Estado:", nullptr));
+        valStatus->setText(QCoreApplication::translate("MainWindow", "Parado", nullptr));
         menuArquivo->setTitle(QCoreApplication::translate("MainWindow", "Arquivo", nullptr));
         menuExibir->setTitle(QCoreApplication::translate("MainWindow", "Exibir", nullptr));
         menuAjuda->setTitle(QCoreApplication::translate("MainWindow", "Ajuda", nullptr));
