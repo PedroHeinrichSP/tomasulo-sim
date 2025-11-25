@@ -46,8 +46,8 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         run: |
           gh api repos/${{ github.repository }}/git/refs \
-            -f ref="refs/tags/${{ github.event.inputs.version }}" \
-            -f sha="${{ github.sha }}"
+            --field ref="refs/tags/${{ github.event.inputs.version }}" \
+            --field sha="${{ github.sha }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
