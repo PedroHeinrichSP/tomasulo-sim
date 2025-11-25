@@ -1,0 +1,70 @@
+name: build-windows-release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Qt
+        uses: jurplel/install-qt@v2
+        with:
+          version: '6.5.2'            # Ajuste para a sua versão do Qt (ex: 6.6.2)
+          host: windows
+          target: msvc2022_64        # Use msvc2019_64 para VS2019, msvc2022_64 para VS2022
+
+      - name: Configure CMake
+        run: |
+          cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_PREFIX_PATH="%QTDIR%"
+
+      - name: Build Release
+        run: |
+          cmake --build build --config Release
+
+      - name: Bundle Qt with windeployqt
+        shell: pwsh
+        run: |
+          $exe = "${{ github.workspace }}\build\Release\TomasuloSim.exe"
+          Write-Host "windeployqt -> $exe"
+          & "$env:QTDIR\bin\windeployqt.exe" --release $exe
+
+      - name: Prepare artifact (zip)
+        shell: pwsh
+        run: |
+          $out = "${{ github.workspace }}\TomasuloSim-windows-x64.zip"
+          if (Test-Path $out) { Remove-Item $out }
+          # copy exe + any DLLs from same folder into a temp folder
+          $tmp = Join-Path $env:TEMP "tomasulo-deploy"
+          if (Test-Path $tmp) { Remove-Item -Recurse -Force $tmp }
+          New-Item -ItemType Directory -Path $tmp | Out-Null
+          Copy-Item -Path "${{ github.workspace }}\build\Release\TomasuloSim.exe" -Destination $tmp
+          # copy DLLs alongside exe (windeployqt will place them next to exe or in folders)
+          Get-ChildItem -Path "${{ github.workspace }}\build\Release" -Filter "*.dll" -Recurse | ForEach-Object { Copy-Item $_.FullName -Destination $tmp }
+          Compress-Archive -Path "$tmp\*" -DestinationPath $out -Force
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./TomasuloSim-windows-x64.zip
+          asset_name: TomasuloSim-windows-x64.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
