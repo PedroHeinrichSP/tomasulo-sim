@@ -44,13 +44,14 @@ jobs:
       # -----------------------
       - name: Create tag (only manual)
         if: github.event_name == 'workflow_dispatch'
+        shell: bash
         run: |
           gh api repos/${{ github.repository }}/git/refs \
-            --field ref="refs/tags/${{ github.event.inputs.version }}" \
-            --field sha="${{ github.sha }}"
+            -f ref="refs/tags/${{ github.event.inputs.version }}" \
+            -f sha="${{ github.sha }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+          
       # -----------------------
       # 4) CONFIGURAR CMAKE
       # -----------------------
