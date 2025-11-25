@@ -48,9 +48,10 @@ jobs:
       - name: Bundle Qt (windeployqt)
         shell: pwsh
         run: |
+          $qt = "$env:QT_ROOT_DIR"
           $exe = "${{ github.workspace }}\build\Release\TomasuloSim.exe"
-          Write-Host "Running windeployqt on $exe"
-          & "$env:QTDIR\bin\windeployqt.exe" --release $exe
+          Write-Host "Qt dir: $qt"
+          & "$qt\bin\windeployqt.exe" --release $exe
 
       # -----------------------
       # 6) GERAR ARQUIVO ZIP
