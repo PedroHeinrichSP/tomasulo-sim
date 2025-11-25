@@ -5,6 +5,9 @@ on:
     tags:
       - "v*.*.*"
 
+permissions:
+  contents: write   # <- NECESSÁRIO para criar release
+
 jobs:
   build-windows:
     runs-on: windows-latest
@@ -20,21 +23,25 @@ jobs:
       # 2) INSTALAR QT
       # -----------------------
       - name: Install Qt
+        id: qt
         uses: jurplel/install-qt-action@v4
         with:
           version: '6.5.2'
-          host: windows
           target: desktop
+          host: windows
           arch: win64_msvc2019_64
+          cache: true
 
       # -----------------------
       # 3) CONFIGURAR CMAKE
       # -----------------------
       - name: Configure CMake
-        run: cmake -S . -B build `
-                   -G "Visual Studio 17 2022" `
-                   -A x64 `
-                   -DCMAKE_PREFIX_PATH="$env:QTDIR"
+        shell: pwsh
+        run: |
+          cmake -S . -B build `
+                 -G "Visual Studio 17 2022" `
+                 -A x64 `
+                 -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR"
 
       # -----------------------
       # 4) COMPILAR
@@ -43,7 +50,7 @@ jobs:
         run: cmake --build build --config Release
 
       # -----------------------
-      # 5) RODAR WINDEPLOYQT
+      # 5) EXECUTAR WINDEPLOYQT
       # -----------------------
       - name: Bundle Qt (windeployqt)
         shell: pwsh
@@ -51,10 +58,11 @@ jobs:
           $qt = "$env:QT_ROOT_DIR"
           $exe = "${{ github.workspace }}\build\Release\TomasuloSim.exe"
           Write-Host "Qt dir: $qt"
+          Write-Host "Running windeployqt on $exe"
           & "$qt\bin\windeployqt.exe" --release $exe
 
       # -----------------------
-      # 6) GERAR ARQUIVO ZIP
+      # 6) GERAR ZIP
       # -----------------------
       - name: Pack ZIP
         shell: pwsh
@@ -62,26 +70,26 @@ jobs:
           $deploy = "${{ github.workspace }}\deploy"
           $zip = "${{ github.workspace }}\TomasuloSim-windows-x64.zip"
 
-          if (Test-Path $deploy) { Remove-Item $deploy -Recurse -Force }
+          if (Test-Path $deploy) { Remove-Item -Recurse -Force $deploy }
           New-Item -ItemType Directory -Path $deploy | Out-Null
 
-          Copy-Item -Path "${{ github.workspace }}\build\Release\*" -Destination $deploy -Recurse -Force
+          Copy-Item -Path "${{ github.workspace }}\build\Release\*" `
+                    -Destination $deploy -Recurse -Force
 
           if (Test-Path $zip) { Remove-Item $zip }
 
           Compress-Archive -Path "$deploy\*" -DestinationPath $zip -Force
 
       # -----------------------
-      # 7) CRIAR RELEASE
+      # 7) CRIAR RELEASE E ENVIAR ZIP
       # -----------------------
       - name: Create Release
-        id: create_release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: TomasuloSim-windows-x64.zip
           draft: false
           prerelease: false
-          files: TomasuloSim-windows-x64.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
