@@ -24,7 +24,8 @@ jobs:
         with:
           version: '6.5.2'
           host: windows
-          target: msvc2022_64
+          target: desktop
+          arch: win64_msvc2019_64
 
       # -----------------------
       # 3) CONFIGURAR CMAKE
