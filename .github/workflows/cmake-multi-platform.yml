@@ -20,7 +20,7 @@ jobs:
       # 2) INSTALAR QT
       # -----------------------
       - name: Install Qt
-        uses: miurahr/setup-qt@v2
+        uses: jurplel/install-qt-action@v4
         with:
           version: '6.5.2'
           host: windows
