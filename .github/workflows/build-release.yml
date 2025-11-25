@@ -12,23 +12,34 @@ on:
     tags:
       - "v*.*.*"
 
+# ============================================================
+# 🔥 PERMISSÕES EXPANDIDAS (SOLUÇÃO 1)
+# ============================================================
 permissions:
   contents: write
+  actions: write
+  deployments: write
+  packages: write
+  issues: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
 
 jobs:
   build-windows:
     runs-on: windows-latest
 
     steps:
-      # -----------------------
+      # --------------------------------------------------------
       # 1) CHECKOUT
-      # -----------------------
+      # --------------------------------------------------------
       - name: Checkout
         uses: actions/checkout@v4
 
-      # -----------------------
+      # --------------------------------------------------------
       # 2) INSTALAR QT
-      # -----------------------
+      # --------------------------------------------------------
       - name: Install Qt
         id: qt
         uses: jurplel/install-qt-action@v4
@@ -39,10 +50,10 @@ jobs:
           arch: win64_msvc2019_64
           cache: true
 
-      # -----------------------
-      # 3) CRIAR TAG AUTOMATICAMENTE (SOMENTE NO workflow_dispatch)
-      # -----------------------
-      - name: Create tag (only manual)
+      # --------------------------------------------------------
+      # 3) CRIAR TAG AUTOMÁTICA (WORKFLOW DISPATCH)
+      # --------------------------------------------------------
+      - name: Create tag (manual dispatch only)
         if: github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
@@ -50,11 +61,12 @@ jobs:
             -f ref="refs/tags/${{ github.event.inputs.version }}" \
             -f sha="${{ github.sha }}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      # -----------------------
+          # Se ACTIONS_PAT existir → usa ele. Caso contrário → GITHUB_TOKEN.
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT || secrets.GITHUB_TOKEN }}
+
+      # --------------------------------------------------------
       # 4) CONFIGURAR CMAKE
-      # -----------------------
+      # --------------------------------------------------------
       - name: Configure CMake
         shell: pwsh
         run: |
@@ -63,27 +75,26 @@ jobs:
                  -A x64 `
                  -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR"
 
-      # -----------------------
-      # 5) COMPILAR
-      # -----------------------
+      # --------------------------------------------------------
+      # 5) BUILD
+      # --------------------------------------------------------
       - name: Build Release
         run: cmake --build build --config Release
 
-      # -----------------------
-      # 6) EXECUTAR windeployqt
-      # -----------------------
+      # --------------------------------------------------------
+      # 6) RUN WINDEPLOYQT
+      # --------------------------------------------------------
       - name: Bundle Qt (windeployqt)
         shell: pwsh
         run: |
           $qt = "$env:QT_ROOT_DIR"
           $exe = "${{ github.workspace }}\build\Release\TomasuloSim.exe"
           Write-Host "Qt dir: $qt"
-          Write-Host "Running windeployqt on $exe"
           & "$qt\bin\windeployqt.exe" --release $exe
 
-      # -----------------------
-      # 7) EMPACOTAR RELEASE
-      # -----------------------
+      # --------------------------------------------------------
+      # 7) ZIP
+      # --------------------------------------------------------
       - name: Pack ZIP
         shell: pwsh
         run: |
@@ -100,9 +111,9 @@ jobs:
 
           Compress-Archive -Path "$deploy\*" -DestinationPath $zip -Force
 
-      # -----------------------
-      # 8) CRIAR RELEASE AUTOMATICAMENTE
-      # -----------------------
+      # --------------------------------------------------------
+      # 8) CRIAR RELEASE + UPLOAD (SOLUÇÃO 2: PAT)
+      # --------------------------------------------------------
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
@@ -111,5 +122,5 @@ jobs:
           files: TomasuloSim-windows-x64.zip
           draft: false
           prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          overwrite_files: true
+          token: ${{ secrets.ACTIONS_PAT || secrets.GITHUB_TOKEN }}  # SOLUÇÃO 2
