@@ -1,0 +1,114 @@
+name: Build & Release (Windows)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Digite a versão do release (ex: v1.0.7)"
+        required: true
+        type: string
+
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      # -----------------------
+      # 1) CHECKOUT
+      # -----------------------
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # -----------------------
+      # 2) INSTALAR QT
+      # -----------------------
+      - name: Install Qt
+        id: qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.5.2'
+          target: desktop
+          host: windows
+          arch: win64_msvc2019_64
+          cache: true
+
+      # -----------------------
+      # 3) CRIAR TAG AUTOMATICAMENTE (SOMENTE NO workflow_dispatch)
+      # -----------------------
+      - name: Create tag (only manual)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          gh api repos/${{ github.repository }}/git/refs \
+            -f ref="refs/tags/${{ github.event.inputs.version }}" \
+            -f sha="${{ github.sha }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # -----------------------
+      # 4) CONFIGURAR CMAKE
+      # -----------------------
+      - name: Configure CMake
+        shell: pwsh
+        run: |
+          cmake -S . -B build `
+                 -G "Visual Studio 17 2022" `
+                 -A x64 `
+                 -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR"
+
+      # -----------------------
+      # 5) COMPILAR
+      # -----------------------
+      - name: Build Release
+        run: cmake --build build --config Release
+
+      # -----------------------
+      # 6) EXECUTAR windeployqt
+      # -----------------------
+      - name: Bundle Qt (windeployqt)
+        shell: pwsh
+        run: |
+          $qt = "$env:QT_ROOT_DIR"
+          $exe = "${{ github.workspace }}\build\Release\TomasuloSim.exe"
+          Write-Host "Qt dir: $qt"
+          Write-Host "Running windeployqt on $exe"
+          & "$qt\bin\windeployqt.exe" --release $exe
+
+      # -----------------------
+      # 7) EMPACOTAR RELEASE
+      # -----------------------
+      - name: Pack ZIP
+        shell: pwsh
+        run: |
+          $deploy = "${{ github.workspace }}\deploy"
+          $zip = "${{ github.workspace }}\TomasuloSim-windows-x64.zip"
+
+          if (Test-Path $deploy) { Remove-Item -Recurse -Force $deploy }
+          New-Item -ItemType Directory -Path $deploy | Out-Null
+
+          Copy-Item -Path "${{ github.workspace }}\build\Release\*" `
+                    -Destination $deploy -Recurse -Force
+
+          if (Test-Path $zip) { Remove-Item $zip }
+
+          Compress-Archive -Path "$deploy\*" -DestinationPath $zip -Force
+
+      # -----------------------
+      # 8) CRIAR RELEASE AUTOMATICAMENTE
+      # -----------------------
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.version || github.ref_name }}
+          name: Release ${{ github.event.inputs.version || github.ref_name }}
+          files: TomasuloSim-windows-x64.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
