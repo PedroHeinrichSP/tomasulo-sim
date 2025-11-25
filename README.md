@@ -16,6 +16,10 @@ passo a passo.
 - Visualização gráfica dos estágios do pipeline e preenchimento das tabelas em tempo
 	real a cada ciclo.
 
+## Como usar
+
+Faça o download na pasta de releases e execute o arquivo TomasuloSim
+
 ## Como compilar
 
 Requisitos: Qt 6 (Widgets), CMake ≥ 3.16 e um compilador C++17.
